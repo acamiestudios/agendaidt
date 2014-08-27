@@ -10,6 +10,6 @@ $this->breadcrumbs=array(
 ?>
 
 
-<h2 class="text-center">Editar IDT id <?php echo $model->iduser; ?></h2>
+<h2 class="text-center">Editar IDT <?php echo $model->username; ?></h2>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -34,13 +34,25 @@ class Idt extends CFormModel
 		// will receive user inputs.
 		return array(
 			array('username,email,nombres,apellidos,state', 'required'),
+                        array('iduser', 'numerical','integerOnly'=>true),
 			array('email','email'),
+                        array('username', 'checkSpace'),
+                        array('password','length', 'max'=>64),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('username,password,email,nombres,apellidos,state', 'safe', 'on'=>'search'),
+			array('iduser,username,password,email,nombres,apellidos,state', 'safe', 'on'=>'search'),
 		);
+                
+                
 	}
-
+        
+        public function checkSpace($attribute){
+            if( preg_match('/\s/',$this->$attribute) ){
+                $message = Yii::t('yii', '{attribute} no debe contener espacios.', array('{attribute}'=>$this->getAttributeLabel($attribute)));
+                $this->addError($attribute, $message);
+            }
+        }
+                
 	/**
 	 * @return array relational rules.
 	 */
@@ -59,9 +71,10 @@ class Idt extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
+                        'iduser' => 'iduser',
 			'username' => 'Usuario',
-            'password'=>'Contraseña',
-            'email' => 'Email',
+                        'password'=>'Contraseña',
+                        'email' => 'Email',
 			'nombres' => 'Nombres',
 			'apellidos' => 'Apellidos',
 			'state' => 'Se puede logear'

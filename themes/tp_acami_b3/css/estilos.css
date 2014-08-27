@@ -131,3 +131,8 @@ span .null{
 		background-color: #469C00;
 	}
 }
+
+#checkVal{
+    color: red;
+    font-weight: bold;
+}

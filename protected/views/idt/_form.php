@@ -2,6 +2,8 @@
 /* @var $this Idt */
 /* @var $model Idt */
 /* @var $form CActiveForm */
+$js = Yii::app()->getClientScript();  
+$js->registerScriptFile(Yii::app()->theme->baseUrl . '/js/util.js',CClientScript::POS_END);
 ?>
 
 <div class="col-md-offset-2 col-md-8">
@@ -21,14 +23,15 @@
                 <div class="form-group">
 			<?php echo $form->labelEx($model,'username', array('class' => 'col-md-4 control-label') ); ?>
 			<div class="col-md-8">
-				<?php echo $form->textField($model,'username',array('size'=>50,'maxlength'=>50, 'class' => 'form-control','required'=>'required')); ?>
+				<?php echo $form->textField($model,'username',array('size'=>50,'maxlength'=>50, 'class' => 'form-control','autocomplete'=>'off', 'required'=>'required','onBlur'=>'detectarEspacios(this)')); ?>
 				<?php echo $form->error($model,'username'); ?>
+                            <div id="checkVal"></div>
 			</div>
 		</div>
                 <div class="form-group">
 			<?php echo $form->labelEx($model,'password', array('class' => 'col-md-4 control-label') ); ?>
-			<div class="col-md-8">
-				<?php echo $form->textField($model,'password',array('size'=>50,'maxlength'=>50, 'class' => 'form-control')); ?>
+			<div class="col-md-8">                                
+				<?php echo $form->textField($model,'password',array('size'=>50,'maxlength'=>50, 'class' => 'form-control','autocomplete'=>'off')); ?>
 				<?php echo $form->error($model,'password'); ?>
 			</div>
 		</div>
@@ -36,7 +39,7 @@
                 <div class="form-group">
 			<?php echo $form->labelEx($model,'email', array('class' => 'col-md-4 control-label') ); ?>
 			<div class="col-md-8">
-				<?php echo $form->textField($model,'email',array('size'=>50,'maxlength'=>50, 'class' => 'form-control','required'=>'required')); ?>
+				<?php echo $form->textField($model,'email',array('size'=>50,'maxlength'=>50, 'class' => 'form-control','autocomplete'=>'off','required'=>'required')); ?>
 				<?php echo $form->error($model,'email'); ?>
 			</div>
 		</div>
@@ -44,7 +47,7 @@
 		<div class="form-group">
 			<?php echo $form->labelEx($model,'nombres', array('class' => 'col-md-4 control-label') ); ?>
 			<div class="col-md-8">
-				<?php echo $form->textField($model,'nombres',array('size'=>50,'maxlength'=>50, 'class' => 'form-control','required'=>'required')); ?>
+				<?php echo $form->textField($model,'nombres',array('size'=>50,'maxlength'=>50, 'class' => 'form-control','autocomplete'=>'off','required'=>'required')); ?>
 				<?php echo $form->error($model,'nombres'); ?>
 			</div>
 		</div>
@@ -52,7 +55,7 @@
 		<div class="form-group">
 			<?php echo $form->labelEx($model,'apellidos', array('class' => 'col-md-4 control-label') ); ?>
 			<div class="col-md-8">
-				<?php echo $form->textField($model,'apellidos',array('size'=>50,'maxlength'=>50, 'class' => 'form-control')); ?>
+				<?php echo $form->textField($model,'apellidos',array('size'=>50,'maxlength'=>50, 'class' => 'form-control','autocomplete'=>'off')); ?>
 				<?php echo $form->error($model,'apellidos'); ?>
 			</div>
 		</div>
