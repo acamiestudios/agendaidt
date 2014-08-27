@@ -19,12 +19,12 @@ o <b>=</b>) en el comienzo de cada campo de busqueda.
 	'filter'=>$model,
 	'itemsCssClass' => 'table table-hover',
 	'columns'=>array(
-			'idAprendiz',
+                'cedula',
 		'primer_nombre',
 		'segundo_nombre',
 		'primer_apellido',
 		'segundo_apellido',
-		array('name'=>'idFicha','value'=>'$data->rel_idFicha->nombre'),
+		array('name'=>'idFicha','value'=>'$data->idFicha0->nombre'),
 		array(
 			'class'=>'CButtonColumn',
 			'template'=>'{view}{update}{delete}',

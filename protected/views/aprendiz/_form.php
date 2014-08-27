@@ -18,6 +18,14 @@
 		<p class="note text-center">Campos con <span class="required">*</span> son requeridos.</p>
 		<?php echo $form->errorSummary($model, '', '', array('class' => 'alert alert-danger', 'role' => 'alert')); ?>
 
+                <div class="form-group">
+			<?php echo $form->labelEx($model,'cedula', array('class' => 'col-md-4 control-label') ); ?>
+			<div class="col-md-8">
+				<?php echo $form->textField($model,'cedula',array('size'=>50,'maxlength'=>50, 'class' => 'form-control','required'=>'required')); ?>
+				<?php echo $form->error($model,'cedula'); ?>
+			</div>
+		</div>
+                
 		<div class="form-group">
 			<?php echo $form->labelEx($model,'primer_nombre', array('class' => 'col-md-4 control-label') ); ?>
 			<div class="col-md-8">

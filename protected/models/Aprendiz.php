@@ -9,6 +9,7 @@
  * @property string $segundo_nombre
  * @property string $primer_apellido
  * @property string $segundo_apellido
+ * @property integer $cedula
  * @property integer $idFicha
  *
  * The followings are the available model relations:
@@ -34,12 +35,12 @@ class Aprendiz extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('primer_nombre, primer_apellido, idFicha', 'required'),
-			array('idFicha', 'numerical', 'integerOnly'=>true),
+			array('primer_nombre, primer_apellido, cedula, idFicha', 'required'),
+			array('cedula, idFicha', 'numerical', 'integerOnly'=>true),
 			array('primer_nombre, segundo_nombre, primer_apellido, segundo_apellido', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idAprendiz, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, idFicha', 'safe', 'on'=>'search'),
+			array('idAprendiz, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, cedula, idFicha', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,7 +52,7 @@ class Aprendiz extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'rel_idFicha' => array(self::BELONGS_TO, 'Ficha', 'idFicha'),
+			'idFicha0' => array(self::BELONGS_TO, 'Ficha', 'idFicha'),
 			'inasistencias' => array(self::HAS_MANY, 'Inasistencia', 'idAprendiz'),
 			'instructor-aprendizs' => array(self::HAS_MANY, 'Instructor-aprendiz', 'idAprendiz'),
 		);
@@ -68,6 +69,7 @@ class Aprendiz extends CActiveRecord
 			'segundo_nombre' => 'Segundo Nombre',
 			'primer_apellido' => 'Primer Apellido',
 			'segundo_apellido' => 'Segundo Apellido',
+			'cedula' => 'Cédula',
 			'idFicha' => 'Ficha',
 		);
 	}
@@ -95,8 +97,9 @@ class Aprendiz extends CActiveRecord
 		$criteria->compare('segundo_nombre',$this->segundo_nombre,true);
 		$criteria->compare('primer_apellido',$this->primer_apellido,true);
 		$criteria->compare('segundo_apellido',$this->segundo_apellido,true);
-		$criteria->compare('rel_idFicha.nombre',$this->idFicha,true);
-                $criteria->with=array('rel_idFicha');
+		$criteria->compare('cedula',$this->cedula);
+		$criteria->compare('idFicha0.nombre',$this->idFicha,true);
+                $criteria->with=array('idFicha0');
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
