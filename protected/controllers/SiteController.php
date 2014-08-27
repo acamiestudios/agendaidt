@@ -28,7 +28,7 @@ class SiteController extends Controller
 	public function actionIndex(){
             if( Yii::app()->user->checkAccess('Coordinador') ){
                 $this->render('index_a');
-            }elseif( Yii::app()->user->isGuest || Yii::app()->user->checkAccess('IDT') ){
+            }elseif( Yii::app()->user->isGuest || Yii::app()->user->checkAccess('Instructor') ){
 		$this->render('index');
             }
 	}

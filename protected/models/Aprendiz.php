@@ -95,8 +95,8 @@ class Aprendiz extends CActiveRecord
 		$criteria->compare('segundo_nombre',$this->segundo_nombre,true);
 		$criteria->compare('primer_apellido',$this->primer_apellido,true);
 		$criteria->compare('segundo_apellido',$this->segundo_apellido,true);
-		$criteria->compare('idFicha',$this->idFicha);
-
+		$criteria->compare('rel_idFicha.nombre',$this->idFicha,true);
+                $criteria->with=array('rel_idFicha');
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

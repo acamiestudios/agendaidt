@@ -42,7 +42,7 @@ class HorarioController extends Controller
 		if(isset($_POST['Horario']))
 		{
 			$model->attributes=$_POST['Horario'];
-                        $model->idIdt = Yii::app()->user->id;
+                        $model->idInstructor = Yii::app()->user->id;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idHorario));
 		}

@@ -55,7 +55,7 @@ $js->registerScriptFile(Yii::app()->theme->baseUrl . '/js/util.js',CClientScript
 		</div>
 
 		<!--<div class="form-group">
-			<?php // echo $form->labelEx($model,'idIdt', array('class' => 'col-md-4 control-label') ); ?>
+			<?php // echo $form->labelEx($model,'idInstructor', array('class' => 'col-md-4 control-label') ); ?>
 			<div class="col-md-8">
                                 <?php
                                 
@@ -64,8 +64,8 @@ $js->registerScriptFile(Yii::app()->theme->baseUrl . '/js/util.js',CClientScript
 //                                echo '<pre>';
 //                                print_r($idts);exit;
                                 ?>
-				<?php // echo $form->dropDownList($model,'idIdt',CHtml::listData($idts,'iduser','idt'),array('empty'=>'-Seleccione-','class'=>'form-control')); ?>
-				<?php // echo $form->error($model,'idIdt'); ?>
+				<?php // echo $form->dropDownList($model,'idInstructor',CHtml::listData($idts,'iduser','idt'),array('empty'=>'-Seleccione-','class'=>'form-control')); ?>
+				<?php // echo $form->error($model,'idInstructor'); ?>
 			</div>
 		</div>
 -->

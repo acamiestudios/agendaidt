@@ -9,11 +9,11 @@
  * @property string $hora_fin
  * @property string $dia
  * @property integer $idFicha
- * @property integer $idInstructor
+ * @property integer $idIdt
  *
  * The followings are the available model relations:
  * @property Ficha $idFicha0
- * @property CrugeUser $idInstructor0
+ * @property Instructor $idIdt0
  */
 class Horario extends CActiveRecord
 {
@@ -33,13 +33,12 @@ class Horario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('hora_ini, hora_fin, dia, idFicha, idInstructor', 'required'),
-			array('idFicha, idInstructor', 'numerical', 'integerOnly'=>true),
-			array('hora_ini, hora_fin', 'length', 'max'=>5),
+			array('hora_ini, hora_fin, dia, idFicha, idIdt', 'required'),
+			array('idFicha, idIdt', 'numerical', 'integerOnly'=>true),
 			array('dia', 'length', 'max'=>15),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idHorario, hora_ini, hora_fin, dia, idFicha, idInstructor', 'safe', 'on'=>'search'),
+			array('idHorario, hora_ini, hora_fin, dia, idFicha, idIdt', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,7 +51,7 @@ class Horario extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'idFicha0' => array(self::BELONGS_TO, 'Ficha', 'idFicha'),
-			'idInstructor0' => array(self::BELONGS_TO, 'CrugeUser', 'idInstructor'),
+			'idIdt0' => array(self::BELONGS_TO, 'cruge_user', 'iduser'),
 		);
 	}
 
@@ -65,9 +64,9 @@ class Horario extends CActiveRecord
 			'idHorario' => 'Id Horario',
 			'hora_ini' => 'Hora Ini',
 			'hora_fin' => 'Hora Fin',
-			'dia' => 'Dia',
-			'idFicha' => 'Id Ficha',
-			'idInstructor' => 'Id Instructor',
+			'dia' => 'Día',
+			'idFicha' => 'Ficha',
+			'idIdt' => 'IDT',
 		);
 	}
 
@@ -94,21 +93,37 @@ class Horario extends CActiveRecord
 		$criteria->compare('hora_fin',$this->hora_fin,true);
 		$criteria->compare('dia',$this->dia,true);
 		$criteria->compare('idFicha',$this->idFicha);
-		$criteria->compare('idInstructor',$this->idInstructor);
+                $criteria->compare('idIdt',Yii::app()->user->id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-
+        
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
 	 * @return Horario the static model class
 	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
-	}
+	public static function model($className=__CLASS__){
+            return parent::model($className);
+        }
+
+        protected function afterFind (){
+            // convert to display format
+            $this->hora_ini = date('H:i',strtotime($this->hora_ini));
+            $this->hora_fin = date('H:i',strtotime($this->hora_fin));
+
+            parent::afterFind ();
+        }
+
+        protected function beforeValidate (){
+            // convert to storage format
+            /*$this->createdon = strtotime ($this->createdon);
+            $this->createdon = date ('Y-m-d', $this->createdon);
+
+            return parent::beforeValidate ();*/
+        }
+        
 }

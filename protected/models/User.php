@@ -71,7 +71,6 @@ class User extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'crugeAuthitems' => array(self::MANY_MANY, 'CrugeAuthitem', 'cruge_authassignment(userid, itemname)'),
-                        'idCrugeAsig' => array(self::HAS_MANY, 'CrugeAsignaciones', 'userid'),
 			'crugeFieldvalues' => array(self::HAS_MANY, 'CrugeFieldvalue', 'iduser'),
 		);
 	}
@@ -123,10 +122,8 @@ class User extends CActiveRecord
 		$criteria->compare('t.state',$this->state);
 		$criteria->compare('t2.itemname','Instructor');
                 $criteria->compare('t3.value',$this->nombreCompleto,true);
-//                $criteria->compare('crugeFieldvalues.iduser',$this->iduser);
                 $criteria->join = 'JOIN cruge_authassignment as t2 ON t2.userid = t.iduser ';
                 $criteria->join .='JOIN cruge_fieldvalue as t3 ON t3.iduser = t.iduser';
-//                $criteria->with= array('crugeFieldvalues');
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

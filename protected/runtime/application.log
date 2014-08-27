@@ -10153,3 +10153,106 @@ CrugeUser->validate es false
 </ul></div>
 in C:\xampp\htdocs\agendaidt2\protected\modules\cruge\controllers\UiController.php (158)
 in C:\xampp\htdocs\agendaidt2\index.php (13)
+2014/08/27 04:24:54 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\controllers\UiController.php (158)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/08/27 04:25:01 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\controllers\UiController.php (158)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/08/27 04:37:56 [error] [exception.CException] exception 'CException' with message 'La propiedad "Horario"."idIdt" no se encuentra definida.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(161): CComponent->__set('idIdt', '24')
+#1 C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php(45): CActiveRecord->__set('idIdt', '24')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): HorarioController->actionCreate()
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('create')
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('horario/create')
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/agendaidt/horario/create
+HTTP_REFERER=http://localhost/agendaidt/horario/create
+---
+2014/08/27 04:38:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bd_agendaidt.instructor' doesn't exist. La sentencia SQL ejecutada fue: SHOW FULL COLUMNS FROM `instructor`.
+in C:\xampp\htdocs\agendaidt\protected\models\Instructor.php (122)
+in C:\xampp\htdocs\agendaidt\protected\views\horario\view.php (17)
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (28)
+2014/08/27 04:38:37 [error] [exception.CDbException] exception 'CDbException' with message 'La tabla "instructor" definida en la clase active record "Instructor" no se ha podido encontrar en la base de datos.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Instructor))
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(1485): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\agendaidt\protected\models\Instructor.php(122): CActiveRecord->findByPk('24')
+#4 C:\xampp\htdocs\agendaidt\protected\views\horario\view.php(17): Instructor->getNombreCompletoId('24')
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#9 C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php(28): CController->render('view', Array)
+#10 [internal function]: HorarioController->actionView('2')
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HorarioController), Array)
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HorarioController), Object(ReflectionMethod), Array)
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#16 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('view')
+#21 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('horario/view')
+#22 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/agendaidt/horario/2
+HTTP_REFERER=http://localhost/agendaidt/horario/create
+---
+2014/08/27 04:39:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bd_agendaidt.instructor' doesn't exist. La sentencia SQL ejecutada fue: SHOW FULL COLUMNS FROM `instructor`.
+in C:\xampp\htdocs\agendaidt\protected\models\Instructor.php (122)
+in C:\xampp\htdocs\agendaidt\protected\views\horario\view.php (17)
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (28)
+2014/08/27 04:39:22 [error] [exception.CDbException] exception 'CDbException' with message 'La tabla "instructor" definida en la clase active record "Instructor" no se ha podido encontrar en la base de datos.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Instructor))
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(1485): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\agendaidt\protected\models\Instructor.php(122): CActiveRecord->findByPk('24')
+#4 C:\xampp\htdocs\agendaidt\protected\views\horario\view.php(17): Instructor->getNombreCompletoId('24')
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#9 C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php(28): CController->render('view', Array)
+#10 [internal function]: HorarioController->actionView('2')
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HorarioController), Array)
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HorarioController), Object(ReflectionMethod), Array)
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#16 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('view')
+#21 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('horario/view')
+#22 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/agendaidt/horario/2
+---

@@ -6,8 +6,7 @@ class IdtController extends Controller{
     }
     
     public function actionCreate(){
-        $model = new Idt;
-        $model->isNewRecord = 1;
+        $model = new User;
         
         if(isset($_POST['Idt'])){
             $model->attributes=$_POST['Idt'];
@@ -126,7 +125,7 @@ class IdtController extends Controller{
             $model->nombres = $_POST['User']['nombres'];
             $model->apellidos = $_POST['User']['apellidos'];
             if( $_POST['User']['password'] != '' ){
-                $model->password = $_POST['User']['password'];
+                $model->password = sha1($_POST['User']['password']);
             }
             
             if( $model->save() ){
