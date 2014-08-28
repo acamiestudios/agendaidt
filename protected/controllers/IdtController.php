@@ -8,10 +8,10 @@ class IdtController extends Controller{
     public function actionCreate(){
         $model = new User;
         
-        if(isset($_POST['Idt'])){
-            $model->attributes=$_POST['Idt'];
+        if(isset($_POST['User'])){
+            $model->attributes=$_POST['User'];
             if($model->validate()){
-                $role ='Instructor';
+                $role ='role_Idt';
                 // asi se crea un usuario (una nueva instancia en memoria volatil)
                 $usuarioNuevo = Yii::app()->user->um->createBlankUser();
                 $usuarioNuevo->attributes = $model->attributes;
@@ -87,14 +87,6 @@ class IdtController extends Controller{
     }
     
     public function actionAdmin(){
-        /*$model = Yii::app()->user->um->getSearchModelICrugeStoredUser();
-        $model->unsetAttributes();
-        if( isset($_GET[CrugeUtil::config()->postNameMappings['CrugeStoredUser']]) ) {
-            $model->attributes = $_GET[CrugeUtil::config()->postNameMappings['CrugeStoredUser']];
-        }
-        $dataProvider = $model->searchByAuthItem('Instructor');
-        $this->render("admin", array('model' => $model, 'dataProvider' => $dataProvider));*/
-        
         $model=new User('search');
         $model->unsetAttributes();  // clear any default values
         if(isset($_GET['User']))

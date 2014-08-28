@@ -30,6 +30,7 @@ class Ficha extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+                        array('codigo','unique'),
 			array('codigo, nombre', 'required'),
 			array('codigo', 'length', 'max'=>20),
 			array('nombre', 'length', 'max'=>100),

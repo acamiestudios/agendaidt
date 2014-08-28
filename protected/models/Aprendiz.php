@@ -35,6 +35,7 @@ class Aprendiz extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+                        array('cedula','unique'),
 			array('primer_nombre, primer_apellido, cedula, idFicha', 'required'),
 			array('cedula, idFicha', 'numerical', 'integerOnly'=>true),
 			array('primer_nombre, segundo_nombre, primer_apellido, segundo_apellido', 'length', 'max'=>50),

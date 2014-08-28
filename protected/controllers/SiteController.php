@@ -26,9 +26,9 @@ class SiteController extends Controller
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex(){
-            if( Yii::app()->user->checkAccess('Coordinador') ){
+            if( Yii::app()->user->checkAccess('role_Coordinador') ){
                 $this->render('index_a');
-            }elseif( Yii::app()->user->isGuest || Yii::app()->user->checkAccess('Instructor') ){
+            }elseif( Yii::app()->user->isGuest || Yii::app()->user->checkAccess('role_Idt') ){
 		$this->render('index');
             }
 	}

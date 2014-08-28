@@ -37,7 +37,7 @@ class HorarioController extends Controller
 		$model=new Horario;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		 $this->performAjaxValidation($model);
 
 		if(isset($_POST['Horario']))
 		{
@@ -62,7 +62,7 @@ class HorarioController extends Controller
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		 $this->performAjaxValidation($model);
 
 		if(isset($_POST['Horario']))
 		{

@@ -12,7 +12,9 @@
 		// controller action is handling ajax validation correctly.
 		// There is a call to performAjaxValidation() commented in generated controller code.
 		// See class documentation of CActiveForm for details on this.
-		'enableAjaxValidation'=>false,
+                'enableAjaxValidation'=>true,
+                'enableClientValidation'=>true,
+                'focus'=>array($model,'codigo'),
 	)); ?>
 
 		<p class="note text-center">Campos con <span class="required">*</span> son requeridos.</p>
@@ -21,7 +23,7 @@
 		<div class="form-group">
 			<?php echo $form->labelEx($model,'codigo', array('class' => 'col-md-4 control-label') ); ?>
 			<div class="col-md-8">
-				<?php echo $form->textField($model,'codigo',array('size'=>20,'maxlength'=>20, 'class' => 'form-control','required'=>'required')); ?>
+				<?php echo $form->textField($model,'codigo',array('size'=>20,'maxlength'=>20, 'class' => 'form-control','autocomplete'=>'off','required'=>'required')); ?>
 				<?php echo $form->error($model,'codigo'); ?>
 			</div>
 		</div>
@@ -29,7 +31,7 @@
 		<div class="form-group">
 			<?php echo $form->labelEx($model,'nombre', array('class' => 'col-md-4 control-label') ); ?>
 			<div class="col-md-8">
-				<?php echo $form->textField($model,'nombre',array('size'=>60,'maxlength'=>100, 'class' => 'form-control','required'=>'required')); ?>
+				<?php echo $form->textField($model,'nombre',array('size'=>60,'maxlength'=>100, 'class' => 'form-control','autocomplete'=>'off','required'=>'required')); ?>
 				<?php echo $form->error($model,'nombre'); ?>
 			</div>
 		</div>

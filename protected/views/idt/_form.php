@@ -4,6 +4,7 @@
 /* @var $form CActiveForm */
 $js = Yii::app()->getClientScript();  
 $js->registerScriptFile(Yii::app()->theme->baseUrl . '/js/util.js',CClientScript::POS_END);
+
 ?>
 
 <div class="col-md-offset-2 col-md-8">
@@ -15,6 +16,8 @@ $js->registerScriptFile(Yii::app()->theme->baseUrl . '/js/util.js',CClientScript
 		// There is a call to performAjaxValidation() commented in generated controller code.
 		// See class documentation of CActiveForm for details on this.
 		'enableAjaxValidation'=>false,
+                'focus'=>array($model,'username'),
+            
 	)); ?>
 
 		<p class="note text-center">Campos con <span class="required">*</span> son requeridos.</p>

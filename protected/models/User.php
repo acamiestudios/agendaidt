@@ -45,9 +45,11 @@ class User extends CActiveRecord
                         array('username,email,nombres,apellidos,state', 'required'),
 			array('iduser,state, totalsessioncounter, currentsessioncounter', 'numerical', 'integerOnly'=>true),
 			array('regdate, actdate, logondate', 'length', 'max'=>30),
-			array('username, password', 'length', 'max'=>64),
+			array('username, password, nombreCompleto', 'length', 'max'=>64),
                         array('username', 'checkSpace'),
-			array('email,nombres,apellidos', 'length', 'max'=>45),
+			array('nombres,apellidos', 'length', 'max'=>45),
+                        array('email','length','min'=>6),
+                        array('email','email'),
 			array('authkey', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -120,7 +122,7 @@ class User extends CActiveRecord
 		$criteria->compare('t.username',$this->username,true);
 		$criteria->compare('t.email',$this->email,true);
 		$criteria->compare('t.state',$this->state);
-		$criteria->compare('t2.itemname','Instructor');
+		$criteria->compare('t2.itemname','role_Idt');
                 $criteria->compare('t3.value',$this->nombreCompleto,true);
                 $criteria->join = 'JOIN cruge_authassignment as t2 ON t2.userid = t.iduser ';
                 $criteria->join .='JOIN cruge_fieldvalue as t3 ON t3.iduser = t.iduser';

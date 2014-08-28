@@ -14,7 +14,8 @@ $js->registerScriptFile(Yii::app()->theme->baseUrl . '/js/util.js', CClientScrip
 		// controller action is handling ajax validation correctly.
 		// There is a call to performAjaxValidation() commented in generated controller code.
 		// See class documentation of CActiveForm for details on this.
-		'enableAjaxValidation'=>false,
+		'enableAjaxValidation'=>true,
+                'enableClientValidation'=>true,
 	)); ?>
 
 		<p class="note text-center">Campos con <span class="required">*</span> son requeridos.</p>

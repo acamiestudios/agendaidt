@@ -3,11 +3,11 @@
 /* @var $model Aprendiz */
 
 $this->breadcrumbs=array(
-	'Aprendices'=>array('admin'),
+	"IDT'S"=>array('admin'),
 	'Administrar',
 );echo User::getNombresApellidos($model->iduser);
 ?>
-<h2 class="text-center">Administrar Aprendices</h2>
+<h2 class="text-center">Administrar IDT'S</h2>
 <?php echo CHtml::link('Nuevo <i class="glyphicon glyphicon-plus"></i>',array('create'),array('class' => 'btn btn-success pull-right')); ?><p>
 Opcionalmente puedes usar operadores de comparaci&oacute;n (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
 o <b>=</b>) en el comienzo de cada campo de busqueda.

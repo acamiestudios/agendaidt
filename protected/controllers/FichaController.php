@@ -16,28 +16,6 @@ class FichaController extends Controller
             return array(array('CrugeAccessControlFilter'));
 	}
         
-        public function accessRules()
-	{
-		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','buscarProducto','existeCodigo'),
-				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','categoria'),
-				'users'=>array('admin'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
-		);
-	}
-
-
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
@@ -58,7 +36,7 @@ class FichaController extends Controller
 		$model=new Ficha;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Ficha']))
 		{
@@ -82,7 +60,7 @@ class FichaController extends Controller
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Ficha']))
 		{
@@ -103,11 +81,23 @@ class FichaController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
-
+            try{
+                $record=$this->loadModel($id);
+                $record->delete();
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+            }catch(CDbException $e){
+                if($e->getCode()===23000){
+                    //You can have nother error handling
+                    header("HTTP/1.0 400");
+                    echo "No se puede eliminar la ficha por que afectaria otra información.";
+                }else{
+                    throw $e;
+                }
+            }
+               // throw new CHttpException(500,'Error');
+                
 	}
 
 	/**
@@ -115,7 +105,7 @@ class FichaController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$this->redirect(array('admin'));
+            $this->redirect(array('admin'));
 	}
 
 	/**

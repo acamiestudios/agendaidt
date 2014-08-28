@@ -1,4 +1,4 @@
-<h3 class="text-center"><?php echo CrugeTranslator::t('logon',"Login"); ?></h3>
+
 <?php if(Yii::app()->user->hasFlash('loginflash')): ?>
 <div class="flash-error">
 	<?php echo Yii::app()->user->getFlash('loginflash'); ?>
@@ -6,6 +6,7 @@
 <?php else: ?>
 <div class="col-md-offset-4 col-md-4">
 <div class="well mi-box">
+    <h3 class="text-center"><?php echo CrugeTranslator::t('logon',"Login"); ?></h3><br>
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'logon-form',
         'htmlOptions'=>array('class'=>'form-horizontal','role'=>'form'),
@@ -26,24 +27,17 @@
 		<?php echo $form->error($model,'password'); ?>
         </div>
         
-	<div class="form-group rememberMe">
-            
-            
-            <?php echo $form->label($model,'rememberMe',array('class'=>'control-label')); ?>
-                <?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
-        </div>
 	<div class="text-center">
             <?php Yii::app()->user->ui->tbutton(CrugeTranslator::t('logon', "Login")); ?>
             
 	</div>
-        <div class="text-center">
-            <?php echo '[' . Yii::app()->user->ui->passwordRecoveryLink . ']&nbsp;&nbsp;'; ?>
+        <!--<div class="text-center">-->
+            <?php //echo '[' . Yii::app()->user->ui->passwordRecoveryLink . ']&nbsp;&nbsp;'; ?>
             <?php
                 if(Yii::app()->user->um->getDefaultSystem()->getn('registrationonlogin')===1)
                         echo '[' . Yii::app()->user->ui->registrationLink . ']';
             ?>
-        </div>
+        <!--</div>-->
 	<?php
 		//	si el componente CrugeConnector existe lo usa:
 		//
