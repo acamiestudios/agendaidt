@@ -1,6 +1,6 @@
 <?php
-/* @var $this InstructorController */
-/* @var $model Instructor */
+/* @var $this IdtController */
+/* @var $model Idt */
 
 $this->breadcrumbs=array(
 	"IDT'S"=>array('admin'),

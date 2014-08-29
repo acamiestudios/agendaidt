@@ -44,7 +44,7 @@ return array(
 				'availableAuthModes'=>array('username'),
 
                                 // url base para los links de activacion de cuenta de usuario
-				'baseUrl'=>'http://acamiestudios.com/agendaidt',
+				'baseUrl'=>'http://agendaidt.acamiestudios.com/',
 
 				 // NO OLVIDES PONER EN FALSE TRAS INSTALAR
 				 'debug'=>true,

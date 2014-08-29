@@ -16,7 +16,6 @@ class HorarioController extends Controller
             return array(array('CrugeAccessControlFilter'));
 	}
 
-
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
@@ -37,12 +36,12 @@ class HorarioController extends Controller
 		$model=new Horario;
 
 		// Uncomment the following line if AJAX validation is needed
-		 $this->performAjaxValidation($model);
+		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Horario']))
 		{
 			$model->attributes=$_POST['Horario'];
-                        $model->idInstructor = Yii::app()->user->id;
+                        $model->idIdt=Yii::app()->user->id;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idHorario));
 		}
@@ -59,18 +58,21 @@ class HorarioController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+            
 		$model=$this->loadModel($id);
-
+                if( $model->idIdt == Yii::app()->user->id ){
+                    
 		// Uncomment the following line if AJAX validation is needed
-		 $this->performAjaxValidation($model);
+		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Horario']))
-		{
-			$model->attributes=$_POST['Horario'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idHorario));
-		}
-
+                    if(isset($_POST['Horario'])){
+                            $model->attributes=$_POST['Horario'];
+                            if($model->save())
+                                $this->redirect(array('view','id'=>$model->idHorario));
+                    }
+                }else{
+                    $model->addError('error','No eres el propietario de este registro, no puedes modificarlo.');
+                }
 		$this->render('update',array(
 			'model'=>$model,
 		));
@@ -83,11 +85,14 @@ class HorarioController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
-
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+            $model=$this->loadModel($id);
+            if( $model->idIdt == Yii::app()->user->id ){
+                $model->delete();
+            }
+            // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+            if(!isset($_GET['ajax'])){
+                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+            }
 	}
 
 	/**

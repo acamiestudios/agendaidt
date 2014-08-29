@@ -19,40 +19,41 @@ o <b>=</b>) en el comienzo de cada campo de busqueda.
 	'filter'=>$model,
 	'itemsCssClass' => 'table table-hover',
 	'columns'=>array(
-//                        array('name'=>'idIdt','value'=>'$data->idIdt0->username)'),
-//            'idIdt',
-                        'dia',
-                        'hora_ini',
-                        'hora_fin',
-                        array('name'=>'idFicha','value'=>'$data->idFicha0->nombre'),
-                        array(
-                            'class'=>'CButtonColumn',
-                            'template'=>'{view}{update}{delete}',
-                            'header' => 'Acción',
-                            'buttons' => array(
-                                    'view' => array(
-                                        'label' => '<i class="glyphicon glyphicon-eye-open"></i>',
-                                        'imageUrl'=>false,  //Image URL of the button.
-                                        'options'=>array('title' => 'Ver registro.', 'class' => 'linkBacion'),
-                                        //'click'=>'',     //A JS function to be invoked when the button is clicked.
-                                        //'visible'=>'',   //A PHP expression for determining whether the button is visible.
-                                    ),
-                                    'update' => array(
-                                        'label' => '<i class="glyphicon glyphicon-pencil"></i>',     //Text label of the button.
-                                        'imageUrl'=>false,  //Image URL of the button.
-                                        'options'=>array('title' => 'Editar registro.'),
-                                        //'click'=>'',     //A JS function to be invoked when the button is clicked.
-                                        //'visible'=>'',   //A PHP expression for determining whether the button is visible.
-                                    ),
-                                    'delete' => array(
-                                        'label' => '<i class="glyphicon glyphicon-trash"></i>',
-                                        'imageUrl'=> false,
-                                        'options'=>array('title' => 'Eliminar registro.'),
-                                        //'click'=>'',     //A JS function to be invoked when the button is clicked.
-                                        //'visible'=>'',   //A PHP expression for determining whether the button is visible.
-                                    ),  
+		array('name'=>'idHora','value'=>'$data->idHora0->valor'),
+		array(
+                    'name'=>'dia',
+                    'value'=>'Util::getDia($data->dia)',
+                    'filter'=>CHtml::dropDownList('Horario[dia]','',array(1=>'Lunes',2=>'Martes',3=>'Miércoles',4=>'Jueves',5=>'Viernes',6=>'Sábado',0=>'Domingo'),array('empty'=>'-Seleccione-')),
+                    ),
+		array('name'=>'idFicha','value'=>'$data->idFicha0->codigo . " - " . $data->idFicha0->nombre'),
+		array('name'=>'idIdt','value'=>'Yii::app()->user->um->getFieldValue($data->idIdt,"nombres") . " " . Yii::app()->user->um->getFieldValue($data->idIdt,"apellidos")'),
+		array(
+			'class'=>'CButtonColumn',
+			'template'=>'{view}{update}{delete}',
+                        'header' => 'Acción',
+                        'buttons' => array(
+                            'view' => array(
+                                'label' => '<i class="glyphicon glyphicon-eye-open"></i>',
+                                'imageUrl'=>false,  //Image URL of the button.
+                                'options'=>array('title' => 'Ver registro.', 'class' => 'linkBacion'),
+                                //'click'=>'',     //A JS function to be invoked when the button is clicked.
+                                'visible'=>'($data->idIdt==Yii::app()->user->id)',   //A PHP expression for determining whether the button is visible.
                             ),
+                            'update' => array(
+                                'label' => '<i class="glyphicon glyphicon-pencil"></i>',     //Text label of the button.
+                                'imageUrl'=>false,  //Image URL of the button.
+                                'options'=>array('title' => 'Editar registro.'),
+                                //'click'=>'',     //A JS function to be invoked when the button is clicked.
+                                'visible'=>'($data->idIdt==Yii::app()->user->id)',   //A PHP expression for determining whether the button is visible.
+                            ),
+                            'delete' => array(
+                                'label' => '<i class="glyphicon glyphicon-trash"></i>',
+                                'imageUrl'=> false,
+                                'options'=>array('title' => 'Eliminar registro.'),
+                                //'click'=>'',     //A JS function to be invoked when the button is clicked.
+                                'visible'=>'($data->idIdt==Yii::app()->user->id)',   //A PHP expression for determining whether the button is visible.
+                            ),  
+            ),
 		),
 	),
-));
-?>
+)); ?>
