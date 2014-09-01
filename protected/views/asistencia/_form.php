@@ -1,12 +1,12 @@
 <?php
-/* @var $this HorarioController */
-/* @var $model Horario */
+/* @var $this AsistenciaController */
+/* @var $model Asistencia */
 /* @var $form CActiveForm */
 ?>
 
 <div class="col-md-offset-2 col-md-8">
 	<?php $form=$this->beginWidget('CActiveForm', array(
-		'id'=>'horario-form',
+		'id'=>'asistencia-form',
 		'htmlOptions' => array( 'class' => 'form-horizontal', 'role' => 'form'),
 		// Please note: When you enable ajax validation, make sure the corresponding
 		// controller action is handling ajax validation correctly.
@@ -17,28 +17,36 @@
 
 		<p class="note text-center">Campos con <span class="required">*</span> son requeridos.</p>
 		<?php echo $form->errorSummary($model, '', '', array('class' => 'alert alert-danger', 'role' => 'alert')); ?>
-                
-                <div class="form-group">
-			<?php echo $form->labelEx($model,'idFicha', array('class' => 'col-md-4 control-label') ); ?>
-			<div class="col-md-8">
-				<?php echo $form->dropDownList($model, 'idFicha', CHtml::listData(Ficha::model()->findAll(),'idFicha', 'nombre'),array('empty'=>'-Seleccione-','class'=>'form-control','required'=>'required'));?>
-				<?php echo $form->error($model,'idFicha'); ?>
-			</div>
-		</div>
-                
+
 		<div class="form-group">
-			<?php echo $form->labelEx($model,'idHora', array('class' => 'col-md-4 control-label') ); ?>
+			<?php echo $form->labelEx($model,'idAprendiz', array('class' => 'col-md-4 control-label') ); ?>
 			<div class="col-md-8">
-				<?php echo $form->dropDownList($model, 'idHora', CHtml::listData(Hora::model()->findAll(),'idHora', 'valor'),array('empty'=>'-Seleccione-','class'=>'form-control','required'=>'required'));?>
-				<?php echo $form->error($model,'idHora'); ?>
+				<?php echo $form->dropDownList($model,'idAprendiz',CHtml::listData(Aprendiz::model()->findAll(),'idAprendiz','cedula'),array('empty'=>'-Seleccione-','class' => 'form-control')); ?>
+				<?php echo $form->error($model,'idAprendiz'); ?>
 			</div>
 		</div>
 
 		<div class="form-group">
-			<?php echo $form->labelEx($model,'dia', array('class' => 'col-md-4 control-label') ); ?>
+			<?php echo $form->labelEx($model,'idHorario', array('class' => 'col-md-4 control-label') ); ?>
 			<div class="col-md-8">
-				<?php echo $form->dropDownList($model,'dia',array(1=>'Lunes',2=>'Martes',3=>'Miércoles',4=>'Jueves',5=>'Viernes',6=>'Sábado',7=>'Domingo'),array('empty'=>'-Seleccione-','class' => 'form-control','required'=>'required')); ?>
-				<?php echo $form->error($model,'dia'); ?>
+				<?php echo $form->textField($model,'idHorario',array('class' => 'form-control')); ?>
+				<?php echo $form->error($model,'idHorario'); ?>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<?php echo $form->labelEx($model,'fechaAsistencia', array('class' => 'col-md-4 control-label') ); ?>
+			<div class="col-md-8">
+				<?php echo $form->textField($model,'fechaAsistencia',array('class' => 'form-control')); ?>
+				<?php echo $form->error($model,'fechaAsistencia'); ?>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<?php echo $form->labelEx($model,'asistio', array('class' => 'col-md-4 control-label') ); ?>
+			<div class="col-md-8">
+				<?php echo $form->textField($model,'asistio',array('class' => 'form-control')); ?>
+				<?php echo $form->error($model,'asistio'); ?>
 			</div>
 		</div>
 

@@ -1,29 +1,27 @@
 <?php
 
 /**
- * This is the model class for table "horario".
+ * This is the model class for table "asistencia".
  *
- * The followings are the available columns in table 'horario':
+ * The followings are the available columns in table 'asistencia':
+ * @property integer $idAsistencia
+ * @property integer $idAprendiz
  * @property integer $idHorario
- * @property integer $idHora
- * @property integer $dia
- * @property integer $idFicha
- * @property integer $idIdt
+ * @property string $fechaAsistencia
+ * @property integer $asistio
  *
  * The followings are the available model relations:
- * @property Hora $idHora0
- * @property Ficha $idFicha0
- * @property CrugeUser $idIdt0
+ * @property Horario $idHorario0
+ * @property Aprendiz $idAprendiz0
  */
-class Horario extends CActiveRecord
+class Asistencia extends CActiveRecord
 {
-        public $nombreCompleto;
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'horario';
+		return 'asistencia';
 	}
 
 	/**
@@ -34,12 +32,11 @@ class Horario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idHora, dia, idFicha, idIdt', 'required'),
-			array('idHora, dia, idFicha, idIdt', 'numerical', 'integerOnly'=>true),
-                        array('nombreCompleto','length','max'=>200),
+			array('idAprendiz, idHorario, fechaAsistencia, asistio', 'required'),
+			array('idAprendiz, idHorario, asistio', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idHorario, idHora, dia, idFicha, idIdt, nombreCompleto', 'safe', 'on'=>'search'),
+			array('idAsistencia, idAprendiz, idHorario, fechaAsistencia, asistio', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,9 +48,8 @@ class Horario extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idHora0' => array(self::BELONGS_TO, 'Hora', 'idHora'),
-			'idFicha0' => array(self::BELONGS_TO, 'Ficha', 'idFicha'),
-			'idIdt0' => array(self::BELONGS_TO, 'CrugeUser', 'idIdt'),
+			'idHorario0' => array(self::BELONGS_TO, 'Horario', 'idHorario'),
+			'idAprendiz0' => array(self::BELONGS_TO, 'Aprendiz', 'idAprendiz'),
 		);
 	}
 
@@ -63,12 +59,11 @@ class Horario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'idAsistencia' => 'Id Asistencia',
+			'idAprendiz' => 'Id Aprendiz',
 			'idHorario' => 'Id Horario',
-			'idHora' => 'Hora',
-			'dia' => 'Día',
-			'idFicha' => 'Ficha',
-			'idIdt' => 'IDT',
-                        'nombreCompleto' => 'Nombre',
+			'fechaAsistencia' => 'Fecha Asistencia',
+			'asistio' => 'Asistio',
 		);
 	}
 
@@ -90,14 +85,12 @@ class Horario extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('idAsistencia',$this->idAsistencia);
+		$criteria->compare('idAprendiz',$this->idAprendiz);
 		$criteria->compare('idHorario',$this->idHorario);
-		$criteria->compare('idHora0.valor',$this->idHora,true);
-		$criteria->compare('t.dia',$this->dia);
-		$criteria->compare('idFicha0.nombre',$this->idFicha,true);
-		$criteria->compare('t3.value',$this->idIdt,true);
-                $criteria->with=array('idHora0','idFicha0');
-                $criteria->join = 'JOIN cruge_authassignment as t2 ON t2.userid = t.idIdt ';
-                $criteria->join .='JOIN cruge_fieldvalue as t3 ON t3.iduser = t.idIdt';
+		$criteria->compare('fechaAsistencia',$this->fechaAsistencia,true);
+		$criteria->compare('asistio',$this->asistio);
+
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
@@ -107,12 +100,10 @@ class Horario extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Horario the static model class
+	 * @return Asistencia the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-        
-        
 }

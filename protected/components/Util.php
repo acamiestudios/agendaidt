@@ -2,9 +2,6 @@
 class Util{
     public function getDia($cod){
         switch($cod){
-            case 0:
-                $dia='Domingo';
-                break;
             case 1:
                 $dia='Lunes';
                 break;
