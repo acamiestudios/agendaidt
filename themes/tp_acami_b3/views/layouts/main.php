@@ -56,6 +56,7 @@
                                                 array('label' => '<i class="glyphicon glyphicon-th-large"></i>&nbsp;Aprendices', 'url'=>array('/aprendiz/admin'),'visible'=>Yii::app()->user->checkAccess('role_Coordinador'), ),
                                                 array('label' => '<i class="glyphicon glyphicon-time"></i>&nbsp;Horarios', 'url'=>array('/horario/admin'),'visible'=>Yii::app()->user->checkAccess('role_Idt'), ),
                                                 array('label' => '<i class="glyphicon glyphicon-check"></i>&nbsp;Asistencias', 'url'=>array('/asistencia/index'),'visible'=>Yii::app()->user->checkAccess('role_Idt'), ),
+                                                array('label' => '<i class="glyphicon glyphicon-bell"></i>&nbsp;Deserción', 'url'=>array('/asistencia/desercion'),'visible'=>Yii::app()->user->checkAccess('role_Idt'), ),
                                                 array('label' => '<i class="glyphicon glyphicon-calendar"></i>&nbsp;Reuniones', 'url'=>array('/reunion/admin'),'visible'=>Yii::app()->user->checkAccess('role_Idt2'), ),
                                                 array('label' => 'Admin','url'=>array('/cruge/ui/usermanagementadmin'),'visible'=>Yii::app()->user->isSuperAdmin),
                                                 array('label'=>'<i class="glyphicon glyphicon-ok"></i>&nbsp;Login', 'url'=>Yii::app()->user->loginUrl, 'visible'=>Yii::app()->user->isGuest),

@@ -8,7 +8,8 @@ $this->breadcrumbs=array(
 );
 ?>
 <h2 class="text-center">Administrar Aprendices</h2>
-<?php echo CHtml::link('Nuevo <i class="glyphicon glyphicon-plus"></i>',array('create'),array('class' => 'btn btn-success pull-right')); ?><p>
+<?php echo CHtml::link('Nuevo <i class="glyphicon glyphicon-plus"></i>',array('create'),array('class' => 'btn btn-success pull-right')); ?>
+<p>
 Opcionalmente puedes usar operadores de comparaci&oacute;n (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
 o <b>=</b>) en el comienzo de cada campo de busqueda.
 </p>

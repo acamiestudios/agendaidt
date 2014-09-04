@@ -2,78 +2,23 @@
 
 class AsistenciaController extends Controller
 {
-	
-
 	/**
-	 * Displays a particular model.
-	 * @param integer $id the ID of the model to be displayed
+	 * @return array action filters
 	 */
-	public function actionView($id)
-	{
+	public function filters(){
             return array(array('CrugeAccessControlFilter'));
 	}
 
-	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
-	public function actionCreate()
-	{
-		$model=new Asistencia;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Asistencia']))
-		{
-			$model->attributes=$_POST['Asistencia'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idAsistencia));
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
-	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
-	 * @param integer $id the ID of the model to be updated
-	 */
-	public function actionUpdate($id)
-	{
-		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Asistencia']))
-		{
-			$model->attributes=$_POST['Asistencia'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idAsistencia));
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
-	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'admin' page.
-	 * @param integer $id the ID of the model to be deleted
-	 */
-	public function actionDelete($id)
-	{
-		$this->loadModel($id)->delete();
-
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-	}
-
+        public function actionDesercion() {
+            $model=new Asistencia('search');
+            $model->unsetAttributes();
+            if ( isset($_GET['Asistencia']) ) {
+                $model->attributes=$_GET['Asistencia'];
+            }
+            $this->render('desercion',array(
+                    'model'=>$model,
+                ));
+        }
 	/**
 	 * Redirige a la vista admin.
 	 */
@@ -97,36 +42,6 @@ class AsistenciaController extends Controller
                     'model'=>$model,
                 'dataFichas'=>$dataFichas,
             ));
-	}
-
-	/**
-	 * Administrar todos los registros.
-	 */
-	public function actionAdmin()
-	{
-		$model=new Asistencia('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Asistencia']))
-			$model->attributes=$_GET['Asistencia'];
-
-		$this->render('admin',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
-	 * Returns the data model based on the primary key given in the GET variable.
-	 * If the data model is not found, an HTTP exception will be raised.
-	 * @param integer $id the ID of the model to be loaded
-	 * @return Asistencia the loaded model
-	 * @throws CHttpException
-	 */
-	public function loadModel($id)
-	{
-		$model=Asistencia::model()->findByPk($id);
-		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
-		return $model;
 	}
 
 	/**
@@ -177,6 +92,7 @@ class AsistenciaController extends Controller
                 $idHorario=$_POST['listaAprendices']['idHorario'];
                 $fechaAsistencia=$_POST['listaAprendices']['fechaAsistencia'];
                 $arrAprendices=$_POST['listaAprendices']['asistio'];
+                $idFicha=$_POST['listaAprendices']['idFicha'];
                                 
                 foreach($arrAprendices as $key=>$aprendiz){
                     $asistenciaAprendiz=Asistencia::model()->findByAttributes(array('fechaAsistencia'=>$fechaAsistencia, 'idHorario'=>$idHorario, 'idAprendiz'=>$key));
@@ -189,6 +105,7 @@ class AsistenciaController extends Controller
                         $asistencia->idHorario=$idHorario;
                         $asistencia->fechaAsistencia=$fechaAsistencia;
                         $asistencia->asistio=$aprendiz;
+                        $asistencia->idFicha=$idFicha;
                         $asistencia->save();
                     }
                 }

@@ -5,7 +5,7 @@
 $this->breadcrumbs=array(
 	"IDT'S"=>array('admin'),
 	'Administrar',
-);echo User::getNombresApellidos($model->iduser);
+);
 ?>
 <h2 class="text-center">Administrar IDT'S</h2>
 <?php echo CHtml::link('Nuevo <i class="glyphicon glyphicon-plus"></i>',array('create'),array('class' => 'btn btn-success pull-right')); ?><p>
