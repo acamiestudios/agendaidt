@@ -20,7 +20,7 @@ o <b>=</b>) en el comienzo de cada campo de busqueda.
 	'itemsCssClass' => 'table table-hover',
 	'columns'=>array(
 		array('name'=>'idIdt','value'=>'Yii::app()->user->um->getFieldValue($data->idIdt,"nombres") . " " . Yii::app()->user->um->getFieldValue($data->idIdt,"apellidos")'),
-		array('name'=>'idFicha','value'=>'$data->idFicha0->codigo . " - " . $data->idFicha0->nombre'),
+		array('name'=>'idFicha','value'=>'$data->idFicha0->nombre . " (" . $data->idFicha0->codigo . ")"' ),
 		array(
                     'name'=>'dia',
                     'value'=>'Util::getDia($data->dia)',

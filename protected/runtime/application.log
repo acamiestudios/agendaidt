@@ -5100,3 +5100,229 @@ HTTP_REFERER=http://localhost/agendaidt/horario/admin
 in C:\xampp\htdocs\agendaidt\protected\controllers\FichaController.php (86)
 in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
 in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 02:54:59 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`aprendiz`, CONSTRAINT `aprendiz_ibfk_1` FOREIGN KEY (`idFicha`) REFERENCES `ficha` (`idFicha`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `ficha` WHERE `ficha`.`idFicha`=7.
+in C:\xampp\htdocs\agendaidt\protected\controllers\FichaController.php (86)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 02:55:27 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 02:55:58 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 02:56:30 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 02:56:59 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 02:58:43 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 02:58:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). The SQL statement executed was: DELETE FROM `horario` WHERE `horario`.`idHorario`=5' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('5')
+#2 C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php(90): CActiveRecord->delete()
+#3 [internal function]: HorarioController->actionDelete('5')
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HorarioController), Array)
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HorarioController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('delete')
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('horario/delete')
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/agendaidt/horario/delete/5?ajax=horario-grid
+HTTP_REFERER=http://localhost/agendaidt/horario/admin
+---
+2014/09/04 02:59:12 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 02:59:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). The SQL statement executed was: DELETE FROM `horario` WHERE `horario`.`idHorario`=5' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('5')
+#2 C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php(90): CActiveRecord->delete()
+#3 [internal function]: HorarioController->actionDelete('5')
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HorarioController), Array)
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HorarioController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('delete')
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('horario/delete')
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/agendaidt/horario/delete/5?ajax=horario-grid
+HTTP_REFERER=http://localhost/agendaidt/horario/admin
+---
+2014/09/04 02:59:32 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 02:59:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). The SQL statement executed was: DELETE FROM `horario` WHERE `horario`.`idHorario`=5' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('5')
+#2 C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php(90): CActiveRecord->delete()
+#3 [internal function]: HorarioController->actionDelete('5')
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HorarioController), Array)
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HorarioController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('delete')
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('horario/delete')
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/agendaidt/horario/delete/5?ajax=horario-grid
+HTTP_REFERER=http://localhost/agendaidt/horario/admin
+---
+2014/09/04 02:59:43 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 02:59:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). The SQL statement executed was: DELETE FROM `horario` WHERE `horario`.`idHorario`=5' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('5')
+#2 C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php(90): CActiveRecord->delete()
+#3 [internal function]: HorarioController->actionDelete('5')
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HorarioController), Array)
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HorarioController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('delete')
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('horario/delete')
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/agendaidt/horario/delete/5?ajax=horario-grid
+HTTP_REFERER=http://localhost/agendaidt/horario/admin
+---
+2014/09/04 03:00:26 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 03:00:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). The SQL statement executed was: DELETE FROM `horario` WHERE `horario`.`idHorario`=5' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('5')
+#2 C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php(90): CActiveRecord->delete()
+#3 [internal function]: HorarioController->actionDelete('5')
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HorarioController), Array)
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HorarioController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('delete')
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('horario/delete')
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/agendaidt/horario/delete/5?ajax=horario-grid
+HTTP_REFERER=http://localhost/agendaidt/horario/admin
+---
+2014/09/04 03:00:41 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 03:00:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). The SQL statement executed was: DELETE FROM `horario` WHERE `horario`.`idHorario`=5' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('5')
+#2 C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php(90): CActiveRecord->delete()
+#3 [internal function]: HorarioController->actionDelete('5')
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HorarioController), Array)
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HorarioController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('delete')
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('horario/delete')
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/agendaidt/horario/delete/5?ajax=horario-grid
+HTTP_REFERER=http://localhost/agendaidt/horario/admin
+---
+2014/09/04 03:00:52 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 03:01:02 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 03:01:21 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 03:02:09 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 03:03:02 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 03:03:39 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 03:05:47 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 03:06:35 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 03:07:12 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idHorario`) REFERENCES `horario` (`idHorario`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `horario` WHERE `horario`.`idHorario`=5.
+in C:\xampp\htdocs\agendaidt\protected\controllers\HorarioController.php (90)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 03:19:04 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`horario`, CONSTRAINT `horario_ibfk_1` FOREIGN KEY (`idIdt`) REFERENCES `cruge_user` (`iduser`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `cruge_user` WHERE `cruge_user`.`iduser`=33.
+in C:\xampp\htdocs\agendaidt\protected\controllers\IdtController.php (143)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 03:33:48 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`bd_agendaidt`.`asistencia`, CONSTRAINT `asistencia_ibfk_1` FOREIGN KEY (`idAprendiz`) REFERENCES `aprendiz` (`idAprendiz`) ON UPDATE CASCADE). La sentencia SQL ejecutada fue: DELETE FROM `aprendiz` WHERE `aprendiz`.`idAprendiz`=4.
+in C:\xampp\htdocs\agendaidt\protected\controllers\AprendizController.php (81)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+in C:\xampp\htdocs\agendaidt\index.php (13)

@@ -83,15 +83,23 @@ class HorarioController extends Controller
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
-	public function actionDelete($id)
-	{
-            $model=$this->loadModel($id);
-            if( $model->idIdt == Yii::app()->user->id ){
-                $model->delete();
-            }
-            // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-            if(!isset($_GET['ajax'])){
-                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+	public function actionDelete($id){
+            try{
+                $model=$this->loadModel($id);
+                if( $model->idIdt == Yii::app()->user->id ){
+                    $model->delete();
+                }
+                // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+                if(!isset($_GET['ajax'])){
+                    $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+                }
+            }catch(CDbException $e){
+                if( $e->getCode()== '23000' ){
+                    header("HTTP/1.0 400");
+                    echo "No se puede eliminar la ficha por que afectaría otra información.";
+                }else{
+                    throw $e;
+                }
             }
 	}
 

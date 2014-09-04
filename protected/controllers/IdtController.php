@@ -138,9 +138,20 @@ class IdtController extends Controller{
     }
     
     public function actionDelete($id){
-        $model = Yii::app()->user->um->loadUserById($id)->delete();
-        if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+        try{
+            if( Yii::app()->user->checkAccess('role_Coordinador') ){
+                $model = Yii::app()->user->um->loadUserById($id)->delete();
+                if(!isset($_GET['ajax']))
+                                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+            }
+        }catch(CDbException $e){
+            if($e->getCode() == '23000' ){
+                header('HTTP/1.0 400');
+                echo "No se puede eliminar el IDT por que afectaría otra información.";
+            }else{
+                throw $e;
+            }
+        }
     }
 }
 

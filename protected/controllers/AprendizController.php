@@ -76,11 +76,22 @@ class AprendizController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
-
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+            if( Yii::app()->user->checkAccess('role_Coordinador') ){
+                try{
+                    $this->loadModel($id)->delete();
+                    // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+                    if(!isset($_GET['ajax']))
+                            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+                } catch (CDbException $e) {
+                    if( $e->getCode() == '23000' ){
+                        header('HTTP/1.0 400');
+                        echo "No se puede eliminar el aprendiz por que afectaría otra información.";
+                    }else{
+                        throw $e;
+                    }
+                }
+		
+            }
 	}
 
 	/**
