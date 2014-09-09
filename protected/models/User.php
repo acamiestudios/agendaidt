@@ -22,6 +22,7 @@
  */
 class User extends CActiveRecord
 {
+    public $idFicha;
     public $nombres;
     public $apellidos;
     public $nombreCompleto;
@@ -53,7 +54,7 @@ class User extends CActiveRecord
 			array('authkey', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('iduser, nombres, apellidos, nombreCompleto, regdate, actdate, logondate, username, email, password, authkey, state, totalsessioncounter, currentsessioncounter', 'safe', 'on'=>'search'),
+			array('iduser, idFicha nombres, apellidos, nombreCompleto, regdate, actdate, logondate, username, email, password, authkey, state, totalsessioncounter, currentsessioncounter', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -84,6 +85,7 @@ class User extends CActiveRecord
 	{
 		return array(
                         'iduser' => 'iduser',
+                        'idFicha'=>'Fichas',
 			'username' => 'Usuario',
                         'password'=>'Contraseña',
                         'email' => 'Email',
@@ -124,8 +126,11 @@ class User extends CActiveRecord
 		$criteria->compare('t.state',$this->state);
 		$criteria->compare('t2.itemname','role_Idt');
                 $criteria->compare('t3.value',$this->nombreCompleto,true);
+                $criteria->compare('t5.nombre',$this->idFicha,true);
                 $criteria->join = 'JOIN cruge_authassignment as t2 ON t2.userid = t.iduser ';
-                $criteria->join .='JOIN cruge_fieldvalue as t3 ON t3.iduser = t.iduser';
+                $criteria->join .= 'JOIN cruge_fieldvalue as t3 ON t3.iduser = t.iduser ';
+                $criteria->join .= 'JOIN horario as t4 ON t4.idIdt=t.iduser ';
+                $criteria->join .= 'JOIN ficha as t5 ON t5.idFicha=t4.idFicha ';
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
@@ -144,6 +149,20 @@ class User extends CActiveRecord
         
         public function getNombresApellidos($id){
             return Yii::app()->user->um->getFieldValue($id,'nombres') . ' ' . Yii::app()->user->um->getFieldValue($id,'apellidos');
+        }
+        
+        public function getFichas($id) {
+            $fichas=  Horario::model()->findAllByAttributes(array('idIdt'=>$id));
+            if( $fichas ){
+                foreach ($fichas as $ficha) {
+                    $arrFichas[]=$ficha->idFicha0->nombre;
+                }
+                return implode(', ',$arrFichas);
+            }else{
+                return false;
+            }
+            
+            
         }
         
        

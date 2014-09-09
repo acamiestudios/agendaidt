@@ -5326,3 +5326,1558 @@ in C:\xampp\htdocs\agendaidt\index.php (13)
 in C:\xampp\htdocs\agendaidt\protected\controllers\AprendizController.php (81)
 in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
 in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 03:53:18 [error] [php] trim() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CUrlManager.php:297)
+Stack trace:
+#0 C:\xampp\htdocs\agendaidt\protected\views\site\index.php(9): CWebApplication->createUrl()
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): SiteController->renderFile()
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): SiteController->renderPartial()
+#5 C:\xampp\htdocs\agendaidt\protected\controllers\SiteController.php(32): SiteController->render()
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\agendaidt\index.php(13): CWebApplication->run()
+REQUEST_URI=/agendaidt/site/index
+in C:\xampp\htdocs\agendaidt\protected\views\site\index.php (9)
+in C:\xampp\htdocs\agendaidt\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/04 03:53:38 [error] [exception.CrugeException.401] action_reporte_idt<br/>401
+REQUEST_URI=/agendaidt/reporte/idt
+HTTP_REFERER=http://localhost/agendaidt/site/index
+---
+2014/09/04 03:54:19 [error] [exception.CrugeException.401] action_reporte_idt<br/>401
+REQUEST_URI=/agendaidt/reporte/idt
+HTTP_REFERER=http://localhost/agendaidt/site/index
+---
+2014/09/04 03:54:26 [error] [exception.CException] exception 'CException' with message 'ReporteController no ha podido encontrar la vista "admin" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#1 C:\xampp\htdocs\agendaidt\protected\controllers\ReporteController.php(17): CController->render('admin', Array)
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): ReporteController->actionIdt()
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('idt')
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte/idt')
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/agendaidt/reporte/idt
+HTTP_REFERER=http://localhost/agendaidt/
+---
+2014/09/04 04:21:51 [error] [exception.CrugeException.401] action_horario_admin<br/>401
+REQUEST_URI=/agendaidt/horario/admin
+---
+2014/09/04 22:43:14 [error] [exception.CrugeException.401] action_horario_admin<br/>401
+REQUEST_URI=/agendaidt/horario/admin
+---
+2014/09/04 23:04:00 [error] [exception.CrugeException.401] action_reporte_idts<br/>401
+REQUEST_URI=/agendaidt/reporte/idts
+HTTP_REFERER=http://localhost/agendaidt/site/index
+---
+2014/09/04 23:24:58 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'horario as t4 ON t4.idIdt=t.iduserJOIN ficha as t5 ON t5.idFicha=t4.idFicha WHER' at line 1. La sentencia SQL ejecutada fue: SELECT COUNT(DISTINCT `t`.iduser) FROM `cruge_user` `t` JOIN cruge_authassignment as t2 ON t2.userid = t.iduser JOIN cruge_fieldvalue as t3 ON t3.iduser = t.iduserJOIN horario as t4 ON t4.idIdt=t.iduserJOIN ficha as t5 ON t5.idFicha=t4.idFicha WHERE t2.itemname=:ycp0.
+in C:\xampp\htdocs\agendaidt\protected\views\reporte\idts.php (23)
+in C:\xampp\htdocs\agendaidt\protected\controllers\ReporteController.php (17)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+2014/09/04 23:24:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'horario as t4 ON t4.idIdt=t.iduserJOIN ficha as t5 ON t5.idFicha=t4.idFicha WHER' at line 1. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.iduser) FROM `cruge_user` `t` JOIN cruge_authassignment as t2 ON t2.userid = t.iduser JOIN cruge_fieldvalue as t3 ON t3.iduser = t.iduserJOIN horario as t4 ON t4.idIdt=t.iduserJOIN ficha as t5 ON t5.idFicha=t4.idFicha WHERE t2.itemname=:ycp0' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(147): CGridView->init()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 C:\xampp\htdocs\agendaidt\protected\views\reporte\idts.php(23): CBaseController->widget('zii.widgets.gri...', Array)
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('idts', Array, true)
+#15 C:\xampp\htdocs\agendaidt\protected\controllers\ReporteController.php(17): CController->render('idts', Array)
+#16 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): ReporteController->actionIdts()
+#17 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#20 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('idts')
+#25 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte/idts')
+#26 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/agendaidt/reporte/idts
+HTTP_REFERER=http://localhost/agendaidt/site/index
+---
+2014/09/04 23:56:07 [error] [exception.CException] exception 'CException' with message 'La propiedad "User"."num_control" no se encuentra definida.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(145): CComponent->__get('num_control')
+#1 C:\xampp\htdocs\agendaidt\protected\views\reporte\_idtsPdf.php(24): CActiveRecord->__get('num_control')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\agendaidt\protected\controllers\ReporteController.php(28): CController->renderPartial('_idtsPdf', Array)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): ReporteController->actionPdf()
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('pdf')
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte/pdf')
+#16 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/agendaidt/reporte/pdf
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/04 23:58:27 [error] [exception.CException] exception 'CException' with message 'La propiedad "CGridView"."enableFilter" no se encuentra definida.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWidgetFactory.php(161): CComponent->__set('enableFilter', false)
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(ReporteController), 'zii.widgets.gri...', Array)
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\agendaidt\protected\views\reporte\_idtsPdf.php(19): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\agendaidt\protected\controllers\ReporteController.php(28): CController->renderPartial('_idtsPdf', Array)
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): ReporteController->actionPdf()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('pdf')
+#17 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte/pdf')
+#18 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/agendaidt/reporte/pdf
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/04 23:59:22 [error] [php] Object of class CGridView could not be converted to string (C:\xampp\htdocs\agendaidt\protected\views\reporte\_idtsPdf.php:18)
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): ReporteController->renderFile()
+#1 C:\xampp\htdocs\agendaidt\protected\controllers\ReporteController.php(28): ReporteController->renderPartial()
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): ReporteController->actionPdf()
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): ReporteController->runAction()
+#5 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): ReporteController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): ReporteController->run()
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\agendaidt\index.php(13): CWebApplication->run()
+REQUEST_URI=/agendaidt/reporte/pdf
+in C:\xampp\htdocs\agendaidt\protected\views\reporte\_idtsPdf.php (18)
+in C:\xampp\htdocs\agendaidt\protected\controllers\ReporteController.php (28)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php (90)
+2014/09/05 00:01:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/agendaidt/reporte
+---
+2014/09/05 00:06:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/tp_acami_b3/progbar.css"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/tp_acami...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/themes/tp_acami_b3/progbar.css
+---
+2014/09/05 00:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/tp_acami_b3/progbar.css"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/tp_acami...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/themes/tp_acami_b3/progbar.css
+HTTP_REFERER=http://localhost/agendaidt/reporte/pdf
+---
+2014/09/05 00:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/tp_acami_b3/progbar.css"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/tp_acami...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/themes/tp_acami_b3/progbar.css
+HTTP_REFERER=http://localhost/agendaidt/reporte/pdf
+---
+2014/09/05 00:30:59 [error] [exception.CException] exception 'CException' with message 'La propiedad "User"."0" no se encuentra definida.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(145): CComponent->__get('0')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CModel.php(596): CActiveRecord->__get('0')
+#2 C:\xampp\htdocs\agendaidt\protected\views\reporte\_idtsPdf.php(28): CModel->offsetGet(0)
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\agendaidt\protected\controllers\ReporteController.php(28): CController->renderPartial('_idtsPdf', Array)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): ReporteController->actionPdf()
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('pdf')
+#16 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte/pdf')
+#17 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/agendaidt/reporte/pdf
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/05 00:37:32 [error] [exception.CException] exception 'CException' with message 'La propiedad "User"."0" no se encuentra definida.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(145): CComponent->__get('0')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CModel.php(596): CActiveRecord->__get('0')
+#2 C:\xampp\htdocs\agendaidt\protected\views\reporte\_idtsPdf.php(28): CModel->offsetGet(0)
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\agendaidt\protected\controllers\ReporteController.php(28): CController->renderPartial('_idtsPdf', Array)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): ReporteController->actionPdf()
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('pdf')
+#16 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte/pdf')
+#17 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/agendaidt/reporte/pdf
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/05 00:49:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "themes/tp_acami_b3/img/excel.png"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/tp_acami...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/themes/tp_acami_b3/img/excel.png
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/05 00:49:44 [error] [exception.CException] exception 'CException' with message 'La propiedad "CHttpRequest"."getBaseUrl" no se encuentra definida.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\agendaidt\protected\views\reporte\idts.php(31): CComponent->__get('getBaseUrl')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('idts', Array, true)
+#5 C:\xampp\htdocs\agendaidt\protected\controllers\ReporteController.php(17): CController->render('idts', Array)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): ReporteController->actionIdts()
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('idts')
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte/idts')
+#16 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/agendaidt/reporte/idts
+---
+2014/09/05 00:58:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/export-excel.jpg"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('images/export-e...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/images/export-excel.jpg
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/05 00:59:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/export-excel.jpg"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('images/export-e...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/images/export-excel.jpg
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/05 00:59:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/export-excel.jpg"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('images/export-e...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/images/export-excel.jpg
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/05 01:00:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/export-excel.jpg"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('images/export-e...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/images/export-excel.jpg
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/05 01:00:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/export-excel.jpg"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('images/export-e...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/images/export-excel.jpg
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/05 01:36:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/export-excel.jpg"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('images/export-e...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/images/export-excel.jpg
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/05 01:36:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/export-excel.jpg"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('images/export-e...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/images/export-excel.jpg
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/05 01:48:52 [error] [exception.CrugeException.401] action_reporte_exportarexcel<br/>401
+REQUEST_URI=/agendaidt/index.php/reporte/exportarExcel
+---
+2014/09/05 02:13:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/agendaidt/reporte/
+---
+2014/09/05 02:13:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/agendaidt/reporte/
+---
+2014/09/05 02:17:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/export-excel.jpg"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('images/export-e...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/images/export-excel.jpg
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/05 02:17:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/export-excel.jpg"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('images/export-e...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/images/export-excel.jpg
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/05 02:18:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/export-excel.jpg"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('images/export-e...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/images/export-excel.jpg
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/05 02:19:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/export-excel.jpg"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('images/export-e...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/images/export-excel.jpg
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/05 02:21:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/export-excel.jpg"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('images/export-e...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/images/export-excel.jpg
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/06 15:34:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/export-excel.jpg"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('images/export-e...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/images/export-excel.jpg
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/06 15:35:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/export-excel.jpg"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('images/export-e...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/images/export-excel.jpg
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/06 15:37:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/export-excel.jpg"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('images/export-e...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/images/export-excel.jpg
+HTTP_REFERER=http://localhost/agendaidt/reporte/idts
+---
+2014/09/06 15:37:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "aprendices" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(270): CController->missingAction('aprendices')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('aprendices')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte/aprendi...')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/agendaidt/reporte/aprendices
+HTTP_REFERER=http://localhost/agendaidt/site/index
+---
+2014/09/06 15:41:39 [error] [exception.CrugeException.401] action_reporte_aprendices<br/>401
+REQUEST_URI=/agendaidt/reporte/aprendices
+HTTP_REFERER=http://localhost/agendaidt/site/index
+---
+2014/09/06 15:49:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "horarios" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(270): CController->missingAction('horarios')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('horarios')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte/horario...')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/agendaidt/reporte/horarios
+HTTP_REFERER=http://localhost/agendaidt/site/index
+---
+2014/09/06 15:54:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "horarios" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(270): CController->missingAction('horarios')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('horarios')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte/horario...')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/agendaidt/reporte/horarios
+HTTP_REFERER=http://localhost/agendaidt/site/index
+---
+2014/09/06 15:56:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "horarios" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(270): CController->missingAction('horarios')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('horarios')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte/horario...')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/agendaidt/reporte/horarios
+HTTP_REFERER=http://localhost/agendaidt/site/index
+---
+2014/09/06 15:56:58 [error] [exception.CrugeException.401] action_reporte_horarios<br/>401
+REQUEST_URI=/agendaidt/reporte/horarios
+---
+2014/09/06 16:04:36 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** cor001
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeUserManager.php (259)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\models\ui\CrugeLogon.php (58)
+2014/09/06 16:04:36 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** cor001
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeUserManager.php (259)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\models\auth\CrugeAuthDefault.php (68)
+2014/09/06 16:04:36 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>el usuario no fue hallado</li>
+<li>usuario o correo invalido</li>
+</ul></div>
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\controllers\UiController.php (158)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/06 16:06:31 [warning] [application] Error al establecer unsafe al atributo "regdate" de "CrugeStoredUser".
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\controllers\UiController.php (230)
+2014/09/06 16:06:31 [warning] [application] Error al establecer unsafe al atributo "actdate" de "CrugeStoredUser".
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\controllers\UiController.php (230)
+2014/09/06 16:06:31 [warning] [application] Error al establecer unsafe al atributo "logondate" de "CrugeStoredUser".
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\controllers\UiController.php (230)
+2014/09/06 16:06:31 [warning] [application] Error al establecer unsafe al atributo "nombres" de "CrugeStoredUser".
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\controllers\UiController.php (230)
+2014/09/06 16:06:31 [warning] [application] Error al establecer unsafe al atributo "apellidos" de "CrugeStoredUser".
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\controllers\UiController.php (230)
+2014/09/06 16:08:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "agenda/index"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/index')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/agenda/index
+HTTP_REFERER=http://localhost/agendaidt/site/index
+---
+2014/09/06 17:23:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "agenda/index"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/index')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/agenda/index
+---
+2014/09/06 17:24:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/admin')
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/agendaidt/agenda/admin
+---
+2014/09/06 17:25:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/admin')
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/agendaidt/agenda/admin
+---
+2014/09/06 17:25:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/admin')
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/agendaidt/agenda/admin
+---
+2014/09/06 17:25:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/admin')
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/agendaidt/agenda/admin
+---
+2014/09/06 18:49:17 [error] [exception.CException] exception 'CException' with message 'El asset "C:\xampp\htdocs\agendaidt\protected\extensions\bootbox a ser publicado no existe.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CAssetManager.php:257
+Stack trace:
+#0 C:\xampp\htdocs\agendaidt\protected\extensions\JFullCalendar\JFullCalendar.php(86): CAssetManager->publish('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\agendaidt\protected\extensions\JFullCalendar\JFullCalendar.php(47): JFullCalendar->registerFiles()
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(173): JFullCalendar->run()
+#3 C:\xampp\htdocs\agendaidt\protected\views\agenda\index.php(11): CBaseController->widget('ext.JFullCalend...', Array)
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#8 C:\xampp\htdocs\agendaidt\protected\controllers\AgendaController.php(125): CController->render('index')
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): AgendaController->actionIndex()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda')
+#20 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/agendaidt/agenda/
+---
+2014/09/06 18:50:15 [error] [exception.CException] exception 'CException' with message 'El asset "C:\xampp\htdocs\agendaidt\protected\extensions\bootbox a ser publicado no existe.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CAssetManager.php:257
+Stack trace:
+#0 C:\xampp\htdocs\agendaidt\protected\extensions\JFullCalendar\JFullCalendar.php(86): CAssetManager->publish('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\agendaidt\protected\extensions\JFullCalendar\JFullCalendar.php(47): JFullCalendar->registerFiles()
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(173): JFullCalendar->run()
+#3 C:\xampp\htdocs\agendaidt\protected\views\agenda\index.php(11): CBaseController->widget('ext.JFullCalend...', Array)
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#8 C:\xampp\htdocs\agendaidt\protected\controllers\AgendaController.php(125): CController->render('index')
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): AgendaController->actionIndex()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda')
+#20 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/agendaidt/agenda/
+---
+2014/09/06 18:51:03 [error] [exception.CException] exception 'CException' with message 'El asset "C:\xampp\htdocs\agendaidt\protected\extensions\bootbox a ser publicado no existe.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CAssetManager.php:257
+Stack trace:
+#0 C:\xampp\htdocs\agendaidt\protected\extensions\JFullCalendar\JFullCalendar.php(86): CAssetManager->publish('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\agendaidt\protected\extensions\JFullCalendar\JFullCalendar.php(47): JFullCalendar->registerFiles()
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(173): JFullCalendar->run()
+#3 C:\xampp\htdocs\agendaidt\protected\views\agenda\index.php(11): CBaseController->widget('ext.JFullCalend...', Array)
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#8 C:\xampp\htdocs\agendaidt\protected\controllers\AgendaController.php(125): CController->render('index')
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): AgendaController->actionIndex()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda')
+#20 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/agendaidt/agenda/
+---
+2014/09/06 19:12:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/7905073a/bootstrap.bootbox.min.js"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/7905073a...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/7905073a/bootstrap.bootbox.min.js
+HTTP_REFERER=http://localhost/agendaidt/agenda/
+---
+2014/09/06 19:16:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "event" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(270): CController->missingAction('event')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('event')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/event/ca...')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/agendaidt/agenda/event/calendarevents
+---
+2014/09/06 19:17:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/7905073a/bootstrap.bootbox.min.js"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/7905073a...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/7905073a/bootstrap.bootbox.min.js
+HTTP_REFERER=http://localhost/agendaidt/agenda/
+---
+2014/09/06 19:17:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/7905073a/bootstrap.bootbox.min.js"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/7905073a...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/7905073a/bootstrap.bootbox.min.js
+HTTP_REFERER=http://localhost/agendaidt/agenda/
+---
+2014/09/06 19:19:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/b487ef1a/fullcalendar/jquery-1.10.2.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/b487ef1a...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/b487ef1a/fullcalendar/jquery-1.10.2.min.map
+HTTP_REFERER=http://localhost/agendaidt/agenda/
+---
+2014/09/06 19:19:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/7905073a/bootstrap.bootbox.min.js"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/7905073a...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/7905073a/bootstrap.bootbox.min.js
+HTTP_REFERER=http://localhost/agendaidt/agenda/
+---
+2014/09/06 19:21:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/7905073a/bootstrap.bootbox.min.js"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/7905073a...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/7905073a/bootstrap.bootbox.min.js
+HTTP_REFERER=http://localhost/agendaidt/agenda/
+---
+2014/09/06 19:21:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/b487ef1a/fullcalendar/jquery-1.10.2.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/b487ef1a...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/b487ef1a/fullcalendar/jquery-1.10.2.min.map
+HTTP_REFERER=http://localhost/agendaidt/agenda/
+---
+2014/09/06 19:21:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/7905073a/bootstrap.bootbox.min.js"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/7905073a...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/7905073a/bootstrap.bootbox.min.js
+HTTP_REFERER=http://localhost/agendaidt/agenda/
+---
+2014/09/06 19:32:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/b487ef1a/fullcalendar/jquery-1.10.2.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/b487ef1a...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/b487ef1a/fullcalendar/jquery-1.10.2.min.map
+HTTP_REFERER=http://localhost/agendaidt/agenda/
+---
+2014/09/07 14:42:50 [error] [exception.CException] exception 'CException' with message 'El alias "ext.yii-fullcalendar.FullCalendarWidget" es inválido. Asegúrese de que apunta a un archivo PHP existente y que el archivo tiene permisos de lectura.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.yii-fullcal...', true)
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AgendaController), 'ext.yii-fullcal...', Array)
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.yii-fullcal...', Array)
+#3 C:\xampp\htdocs\agendaidt\protected\views\agenda\cal.php(34): CBaseController->widget('ext.yii-fullcal...', Array)
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('cal', NULL, true)
+#8 C:\xampp\htdocs\agendaidt\protected\controllers\AgendaController.php(125): CController->render('cal')
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): AgendaController->actionIndex()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('index')
+#19 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/index')
+#20 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/agendaidt/agenda/index
+HTTP_REFERER=http://localhost/agendaidt/cal
+---
+2014/09/07 14:45:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('calendar')
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/calendar')
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/agendaidt/agenda/calendar
+---
+2014/09/07 14:46:20 [error] [exception.CException] exception 'CException' with message 'AgendaController no ha podido encontrar la vista "calendar" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('calendar', NULL, true)
+#1 C:\xampp\htdocs\agendaidt\protected\controllers\AgendaController.php(151): CController->render('calendar')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): AgendaController->actionCalendar()
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), NULL)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('calendar')
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/calendar')
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/agendaidt/agenda/calendar
+---
+2014/09/07 15:20:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "efullcalendar" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(270): CController->missingAction('efullcalendar')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('efullcalendar')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/efullcal...')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/agendaidt/agenda/efullcalendar
+---
+2014/09/07 15:22:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "efullcalendar" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(270): CController->missingAction('efullcalendar')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('efullcalendar')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/efullcal...')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/agendaidt/agenda/efullcalendar
+---
+2014/09/07 16:13:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "akfullcalendar" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(270): CController->missingAction('akfullcalendar')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('akfullcalendar')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/akFullCa...')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/agendaidt/agenda/akFullCalendar
+---
+2014/09/07 16:15:08 [error] [exception.CException] exception 'CException' with message 'El alias "ext.akFullCalendar.EFullCalendar" es inválido. Asegúrese de que apunta a un archivo PHP existente y que el archivo tiene permisos de lectura.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.akFullCalen...', true)
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AgendaController), 'ext.akFullCalen...', Array)
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.akFullCalen...', Array)
+#3 C:\xampp\htdocs\agendaidt\protected\views\agenda\akFullcalendar.php(9): CBaseController->widget('ext.akFullCalen...', Array)
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('akFullcalendar', NULL, true)
+#8 C:\xampp\htdocs\agendaidt\protected\controllers\AgendaController.php(170): CController->render('akFullcalendar')
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): AgendaController->actionAkFullCalendar()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), NULL)
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('akfullcalendar')
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/akFullCa...')
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/agendaidt/agenda/akFullCalendar
+---
+2014/09/07 16:15:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/e93e8c4d/themes/cupertino/jquery-ui.min.css"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/e93e8c4d...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/e93e8c4d/themes/cupertino/jquery-ui.min.css
+HTTP_REFERER=http://localhost/agendaidt/agenda/akFullCalendar
+---
+2014/09/07 16:15:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/e93e8c4d/fullcalendar/lib/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/e93e8c4d...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/e93e8c4d/fullcalendar/lib/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/agenda/akFullCalendar
+---
+2014/09/07 16:15:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/e93e8c4d/fullcalendar/lib/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/e93e8c4d...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/e93e8c4d/fullcalendar/lib/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/agenda/akFullCalendar
+---
+2014/09/07 16:17:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/e93e8c4d/fullcalendar/lib/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/e93e8c4d...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/e93e8c4d/fullcalendar/lib/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/agenda/aFullCalendar
+---
+2014/09/07 16:32:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('eFullCalendar')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/agendaidt/eFullCalendar
+---
+2014/09/07 16:38:14 [error] [php] include(Event.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii-1.1.15.022a51\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\agendaidt\protected\views\eFullCalendar\index.php(29): spl_autoload_call()
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): EFullCalendarController->renderInternal()
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): EFullCalendarController->renderFile()
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): EFullCalendarController->renderPartial()
+#5 C:\xampp\htdocs\agendaidt\protected\controllers\EFullCalendarController.php(4): EFullCalendarController->render()
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): EFullCalendarController->actionIndex()
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(286): EFullCalendarController->runAction()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): EFullCalendarController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): EFullCalendarController->run()
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\agendaidt\index.php(13): CWebApplication->run()
+REQUEST_URI=/agendaidt/eFullCalendar
+in C:\xampp\htdocs\agendaidt\protected\views\eFullCalendar\index.php (29)
+in C:\xampp\htdocs\agendaidt\protected\controllers\EFullCalendarController.php (4)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/07 17:14:33 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\agendaidt\protected\models\Agenda.php:114)
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): EFullCalendarController->renderInternal()
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): EFullCalendarController->renderFile()
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): EFullCalendarController->renderPartial()
+#3 C:\xampp\htdocs\agendaidt\protected\controllers\EFullCalendarController.php(4): EFullCalendarController->render()
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): EFullCalendarController->actionIndex()
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(286): EFullCalendarController->runAction()
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): EFullCalendarController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): EFullCalendarController->run()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\agendaidt\index.php(13): CWebApplication->run()
+REQUEST_URI=/agendaidt/eFullCalendar
+in C:\xampp\htdocs\agendaidt\protected\models\Agenda.php (114)
+in C:\xampp\htdocs\agendaidt\protected\views\eFullCalendar\index.php (30)
+in C:\xampp\htdocs\agendaidt\protected\controllers\EFullCalendarController.php (4)
+2014/09/07 17:16:03 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\agendaidt\protected\controllers\EFullCalendarController.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(286): EFullCalendarController->runAction()
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): EFullCalendarController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): EFullCalendarController->run()
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\agendaidt\index.php(13): CWebApplication->run()
+REQUEST_URI=/agendaidt/eFullCalendar
+in C:\xampp\htdocs\agendaidt\protected\controllers\EFullCalendarController.php (5)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/07 17:17:04 [error] [exception.CException] exception 'CException' with message 'La propiedad "Agenda"."findAll" no se encuentra definida.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(145): CComponent->__get('findAll')
+#1 C:\xampp\htdocs\agendaidt\protected\models\Agenda.php(113): CActiveRecord->__get('findAll')
+#2 C:\xampp\htdocs\agendaidt\protected\controllers\EFullCalendarController.php(4): Agenda->getEventos()
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): EFullCalendarController->actionIndex()
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('')
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('eFullCalendar')
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/agendaidt/eFullCalendar
+---
+2014/09/07 17:18:17 [error] [php] Missing argument 2 for CHtml::listData(), called in C:\xampp\htdocs\agendaidt\protected\models\Agenda.php on line 113 and defined (C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\helpers\CHtml.php:2073)
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): EFullCalendarController->actionIndex()
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(286): EFullCalendarController->runAction()
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): EFullCalendarController->runActionWithFilters()
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): EFullCalendarController->run()
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\agendaidt\index.php(13): CWebApplication->run()
+REQUEST_URI=/agendaidt/eFullCalendar
+in C:\xampp\htdocs\agendaidt\protected\models\Agenda.php (113)
+in C:\xampp\htdocs\agendaidt\protected\controllers\EFullCalendarController.php (4)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/07 22:33:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/9a949ca6/fullcalendar/fullcalendar.css"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/9a949ca6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/9a949ca6/fullcalendar/fullcalendar.css
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/index
+---
+2014/09/07 22:33:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/9a949ca6/fullcalendar/fullcalendar.js"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/9a949ca6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/9a949ca6/fullcalendar/fullcalendar.js
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/index
+---
+2014/09/07 22:33:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/9a949ca6/fullcalendar/fullcalendar.print.css"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/9a949ca6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/9a949ca6/fullcalendar/fullcalendar.print.css
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/index
+---
+2014/09/07 22:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/9a949ca6/fullcalendar/fullcalendar.js"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/9a949ca6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/9a949ca6/fullcalendar/fullcalendar.js
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/index
+---
+2014/09/07 22:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/9a949ca6/fullcalendar/fullcalendar.print.css"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/9a949ca6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/9a949ca6/fullcalendar/fullcalendar.print.css
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/index
+---
+2014/09/07 22:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/9a949ca6/fullcalendar/fullcalendar.css"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/9a949ca6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/9a949ca6/fullcalendar/fullcalendar.css
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/index
+---
+2014/09/07 22:54:34 [error] [exception.CException] exception 'CException' with message 'El alias "ext.akCalendario.EFullCalendar" es inválido. Asegúrese de que apunta a un archivo PHP existente y que el archivo tiene permisos de lectura.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.akCalendari...', true)
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AkCalendarioController), 'ext.akCalendari...', Array)
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.akCalendari...', Array)
+#3 C:\xampp\htdocs\agendaidt\protected\views\akCalendario\index.php(50): CBaseController->widget('ext.akCalendari...', Array)
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#8 C:\xampp\htdocs\agendaidt\protected\controllers\AkCalendarioController.php(5): CController->render('index')
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): AkCalendarioController->actionIndex()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('index')
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('akCalendario/in...')
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/agendaidt/akCalendario/index
+HTTP_REFERER=http://localhost/agendaidt/site/index
+---
+2014/09/08 00:07:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/moment.js"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/moment.js
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 00:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/moment.js"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/moment.js
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 00:08:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/moment.js"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/moment.js
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 00:08:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/moment.js"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/moment.js
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 00:08:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/moment.js"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/moment.js
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 00:10:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/fullcalendar.1"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/fullcalendar.1
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 00:10:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/moment.1"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/moment.1
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 00:10:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/fullcalendar.1"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/fullcalendar.1
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 00:10:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/moment.1"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/moment.1
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 00:10:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/moment.1"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/moment.1
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 03:42:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 03:44:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 03:49:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 03:51:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 03:51:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 03:51:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 04:06:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 04:13:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 04:27:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 04:28:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 04:30:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 04:30:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/fullcalendar/lib/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/fullcalendar/lib/jquery.min.map
+---
+2014/09/08 05:19:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/be2d5291/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/be2d5291...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/be2d5291/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 05:20:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/be2d5291/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/be2d5291...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/be2d5291/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 05:24:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/be2d5291/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/be2d5291...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/be2d5291/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 05:26:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/be2d5291/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/be2d5291...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/be2d5291/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 05:34:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/themes/redmond/jquery-ui.theme.css"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/themes/redmond/jquery-ui.theme.css
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 05:34:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/be2d5291/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/be2d5291...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/be2d5291/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 05:34:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/da10c5e6/themes/redmond/jquery-ui.theme.css"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/da10c5e6...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/da10c5e6/themes/redmond/jquery-ui.theme.css
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 05:35:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/be2d5291/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/be2d5291...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/be2d5291/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 05:38:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/be2d5291/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/be2d5291...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/be2d5291/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 05:42:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/be2d5291/jquery.min.map"' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/be2d5291...')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agendaidt/assets/be2d5291/jquery.min.map
+HTTP_REFERER=http://localhost/agendaidt/akCalendario/cal2
+---
+2014/09/08 06:23:10 [error] [exception.CException] exception 'CException' with message 'El alias "ext.akCalendario.EFullCalendar" es inválido. Asegúrese de que apunta a un archivo PHP existente y que el archivo tiene permisos de lectura.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.akCalendari...', true)
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AkCalendarioController), 'ext.akCalendari...', Array)
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.akCalendari...', Array)
+#3 C:\xampp\htdocs\agendaidt\protected\views\akCalendario\index.php(49): CBaseController->widget('ext.akCalendari...', Array)
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#8 C:\xampp\htdocs\agendaidt\protected\controllers\AkCalendarioController.php(5): CController->render('index')
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): AkCalendarioController->actionIndex()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('index')
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('akCalendario/in...')
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/agendaidt/akCalendario/index
+HTTP_REFERER=http://localhost/agendaidt/
+---
+2014/09/09 00:52:02 [error] [exception.CException] exception 'CException' with message 'El alias "ext.akCalendario.EFullCalendar" es inválido. Asegúrese de que apunta a un archivo PHP existente y que el archivo tiene permisos de lectura.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.akCalendari...', true)
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AkCalendarioController), 'ext.akCalendari...', Array)
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.akCalendari...', Array)
+#3 C:\xampp\htdocs\agendaidt\protected\views\akCalendario\index.php(49): CBaseController->widget('ext.akCalendari...', Array)
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#8 C:\xampp\htdocs\agendaidt\protected\controllers\AkCalendarioController.php(5): CController->render('index')
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): AkCalendarioController->actionIndex()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('index')
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('akCalendario/in...')
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/agendaidt/akCalendario/index
+HTTP_REFERER=http://localhost/agendaidt/
+---
+2014/09/09 03:13:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "create" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(270): CController->missingAction('create')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('create')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('calendario/crea...')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/agendaidt/calendario/create
+HTTP_REFERER=http://localhost/agendaidt/calendario/index
+---
+2014/09/09 03:21:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "create" solicitada.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(270): CController->missingAction('create')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('create')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('calendario/crea...')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/agendaidt/calendario/create
+HTTP_REFERER=http://localhost/agendaidt/calendario/index
+---
+2014/09/09 03:21:42 [error] [exception.CException] exception 'CException' with message 'La propiedad "Calendario"."primer_apellido" no se encuentra definida.' in C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(145): CComponent->__get('primer_apellido')
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('primer_apellido')
+#2 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Calendario), 'primer_apellido')
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Calendario), 'primer_apellido', Array)
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Calendario), 'primer_apellido', Array)
+#5 C:\xampp\htdocs\agendaidt\protected\views\calendario\_form.php(51): CActiveForm->textField(Object(Calendario), 'primer_apellido', Array)
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\agendaidt\protected\views\calendario\create.php(13): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\agendaidt\protected\controllers\CalendarioController.php(20): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): CalendarioController->actionCreate()
+#16 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('create')
+#20 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('calendario/crea...')
+#21 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\agendaidt\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/agendaidt/calendario/create
+HTTP_REFERER=http://localhost/agendaidt/calendario/index
+---
+2014/09/09 03:25:18 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** idt001
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeUserManager.php (259)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\models\ui\CrugeLogon.php (58)
+2014/09/09 03:25:18 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** idt001
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\components\CrugeUserManager.php (259)
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\models\auth\CrugeAuthDefault.php (68)
+2014/09/09 03:25:19 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>el usuario no fue hallado</li>
+<li>usuario o correo invalido</li>
+</ul></div>
+in C:\xampp\htdocs\agendaidt\protected\modules\cruge\controllers\UiController.php (158)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/09 03:33:19 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\helpers\CHtml.php:103)
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\helpers\CHtml.php(158): renderAttributes()
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\helpers\CHtml.php(580): tag()
+#2 C:\xampp\htdocs\agendaidt\protected\views\calendario\_form.php(55): label()
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CalendarioController->renderInternal()
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CalendarioController->renderFile()
+#6 C:\xampp\htdocs\agendaidt\protected\views\calendario\create.php(13): CalendarioController->renderPartial()
+#7 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CalendarioController->renderInternal()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CalendarioController->renderFile()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CalendarioController->renderPartial()
+#11 C:\xampp\htdocs\agendaidt\protected\controllers\CalendarioController.php(20): CalendarioController->render()
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): CalendarioController->actionCreate()
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(286): CalendarioController->runAction()
+#15 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CalendarioController->runActionWithFilters()
+#16 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CalendarioController->run()
+#17 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\agendaidt\index.php(13): CWebApplication->run()
+REQUEST_URI=/agendaidt/calendario/create
+in C:\xampp\htdocs\agendaidt\protected\views\calendario\_form.php (55)
+in C:\xampp\htdocs\agendaidt\protected\views\calendario\create.php (13)
+in C:\xampp\htdocs\agendaidt\protected\controllers\CalendarioController.php (20)
+2014/09/09 03:34:30 [error] [php] Missing argument 2 for CHtml::label(), called in C:\xampp\htdocs\agendaidt\protected\views\calendario\_form.php on line 55 and defined (C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\helpers\CHtml.php:562)
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CalendarioController->renderInternal()
+#1 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CalendarioController->renderFile()
+#2 C:\xampp\htdocs\agendaidt\protected\views\calendario\create.php(13): CalendarioController->renderPartial()
+#3 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CalendarioController->renderInternal()
+#5 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(869): CalendarioController->renderFile()
+#6 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(782): CalendarioController->renderPartial()
+#7 C:\xampp\htdocs\agendaidt\protected\controllers\CalendarioController.php(20): CalendarioController->render()
+#8 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): CalendarioController->actionCreate()
+#9 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(286): CalendarioController->runAction()
+#11 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CController.php(265): CalendarioController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CalendarioController->run()
+#13 C:\xampp\htdocs\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\agendaidt\index.php(13): CWebApplication->run()
+REQUEST_URI=/agendaidt/calendario/create
+in C:\xampp\htdocs\agendaidt\protected\views\calendario\_form.php (55)
+in C:\xampp\htdocs\agendaidt\protected\views\calendario\create.php (13)
+in C:\xampp\htdocs\agendaidt\protected\controllers\CalendarioController.php (20)
+2014/09/09 03:37:06 [warning] [application] Error al establecer unsafe al atributo "datepicker" de "Calendario".
+in C:\xampp\htdocs\agendaidt\protected\controllers\CalendarioController.php (13)
+in C:\xampp\htdocs\agendaidt\index.php (13)
+2014/09/09 03:37:11 [warning] [application] Error al establecer unsafe al atributo "datepicker" de "Calendario".
+in C:\xampp\htdocs\agendaidt\protected\controllers\CalendarioController.php (13)
+in C:\xampp\htdocs\agendaidt\index.php (13)

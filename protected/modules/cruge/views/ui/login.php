@@ -9,6 +9,7 @@
     <h3 class="text-center"><?php echo CrugeTranslator::t('logon',"Login"); ?></h3><br>
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'logon-form',
+        'focus'=>array($model,'username'),
         'htmlOptions'=>array('class'=>'form-horizontal','role'=>'form'),
 	'enableClientValidation'=>false,
 	'clientOptions'=>array(

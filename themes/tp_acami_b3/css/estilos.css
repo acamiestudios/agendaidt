@@ -1,5 +1,5 @@
 body{
-   padding-top: 70px; 
+   padding-top: 0px; 
 }
 
 header h1{
@@ -160,3 +160,10 @@ span .null{
     user-select: none;
 }
 
+#eventInfo {
+    margin-bottom: 15px;
+}
+
+.btn-nuevoEvento{
+    margin-left: 15px;
+}
