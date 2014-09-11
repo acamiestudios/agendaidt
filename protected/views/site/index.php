@@ -31,3 +31,12 @@ $this->pageTitle=Yii::app()->name;
         </div>
     </a>
 </div>
+
+<div class="col-md-3">
+    <a href="<?php echo Yii::app()->createUrl('/calendario');?>">
+        <div class="btn-inicio">
+            <h1>Calendario</h1>
+            <img src="<?php echo Yii::app()->request->baseUrl;?>/img/calendario.png" alt="Calendario" title="Calendario">
+        </div>
+    </a>
+</div>

@@ -19,7 +19,11 @@
  */
 class Calendario extends CActiveRecord
 {
-	/**
+    public $fecha_ini;
+    public $hora_ini;
+    public $fecha_fin;
+    public $hora_fin;
+    /**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
@@ -35,16 +39,26 @@ class Calendario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('iduser, title, start, end, descripcion, color, allDay, url', 'required'),
+			array('title, start, fecha_ini, hora_ini', 'required'),
 			array('iduser, allDay', 'numerical', 'integerOnly'=>true),
 			array('title, descripcion, url', 'length', 'max'=>255),
-			array('start, end, color', 'length', 'max'=>20),
+			array('start, fecha_ini, hora_ini, fecha_fin, hora_fin, end, color', 'length', 'max'=>20),
+                        array('start','compareFechas'),
+//                        array('start','compare','compareAttribute'=>'end','operator'=>'<','message'=>'Fecha inicio debe ser menor a la fecha final.'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idCalendario, iduser, title, start, end, descripcion, color, allDay, url', 'safe', 'on'=>'search'),
+			array('idCalendario, iduser, title, fecha_ini, hora_ini, fecha_fin, hora_fin, end, descripcion, color, allDay, url', 'safe', 'on'=>'search'),
 		);
 	}
 
+        public function compareFechas($attribute){
+            if( $this->end != '' ){
+                if( $this->start >= $this->end ) {
+                    $mensaje=Yii::t( 'yii','{attribute} debe ser menor a la fecha final.', array('{attribute}'=>$this->getAttributeLabel($attribute)) );
+                    $this->addError($attribute, $mensaje);
+                }
+            }
+        }
 	/**
 	 * @return array relational rules.
 	 */
@@ -64,11 +78,15 @@ class Calendario extends CActiveRecord
 	{
 		return array(
 			'idCalendario' => 'Id Calendario',
-			'iduser' => 'Iduser',
-			'title' => 'Title',
-			'start' => 'Start',
-			'end' => 'End',
-			'descripcion' => 'Descripcion',
+			'iduser' => 'Usuario',
+			'title' => 'Título',
+			'start' => 'Fecha Inicio',
+                        'fecha_ini'=>'Fecha inicio',
+                        'hora_ini'=>'Hora inicio',
+			'end' => 'Fecha fin',
+                        'fecha_fin'=>'Fecha fin',
+                        'hora_fin'=>'Hora Fin',
+			'descripcion' => 'Descripción',
 			'color' => 'Color',
 			'allDay' => 'All Day',
 			'url' => 'Url',
@@ -131,6 +149,7 @@ class Calendario extends CActiveRecord
                     'end'=>$evento->end,
                     'fecha_fin'=>$evento->end,
                     'allDay'=>($evento->allDay) ? true : false ,
+                    'editable'=>($evento->editable) ? true : false ,
                 );
                 
             }

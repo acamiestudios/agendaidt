@@ -42,7 +42,7 @@
                                                 array('label' => "<i class='glyphicon glyphicon-user'></i>&nbsp;IDT'S", 'url'=>array('/idt/admin'),'visible'=>Yii::app()->user->checkAccess('role_Coordinador'), ),
                                                 array('label' => '<i class="glyphicon glyphicon-folder-open"></i>&nbsp;Fichas', 'url'=>array('/ficha/admin'),'visible'=>Yii::app()->user->checkAccess('role_Coordinador'), ),
                                                 array('label' => '<i class="glyphicon glyphicon-th-large"></i>&nbsp;Aprendices', 'url'=>array('/aprendiz/admin'),'visible'=>Yii::app()->user->checkAccess('role_Coordinador'), ),
-                                                array('label' => '<i class="glyphicon glyphicon-calendar"></i>&nbsp;Calendario', 'url'=>array('/calendario/index'), ),
+                                                array('label' => '<i class="glyphicon glyphicon-calendar"></i>&nbsp;Calendario', 'url'=>array('/calendario/admin'),'visible'=>Yii::app()->user->checkAccess('role_Coordinador'), ),
                                                 array('label' => '<i class="glyphicon glyphicon-time"></i>&nbsp;Horarios', 'url'=>array('/horario/admin'),'visible'=>Yii::app()->user->checkAccess('role_Idt'), ),
                                                 array('label' => '<i class="glyphicon glyphicon-check"></i>&nbsp;Asistencias', 'url'=>array('/asistencia/index'),'visible'=>Yii::app()->user->checkAccess('role_Idt'), ),
                                                 array('label' => '<i class="glyphicon glyphicon-bell"></i>&nbsp;Deserción', 'url'=>array('/asistencia/desercion'),'visible'=>Yii::app()->user->checkAccess('role_Idt'), ),

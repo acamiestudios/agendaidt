@@ -45,13 +45,13 @@ Yii::app()->clientScript->registerScript('pr','
 <script type="text/javascript">
     function openModal(title, info, url,start, end) {
         if (start && start != "null") {
-            $("#startTime").html("<b>De</b> " + start + "<br />")
+            $("#startTime").html("<b>Fecha inicio:</b> " + start + "<br />")
         } else {
             $("#startTime").html(""); //no start (huh?) clear out previous info.
         }
         if (end && end != "null")
         {
-            $("#endTime").html("<b>a</b> " + end + "<br /><br />")
+            $("#endTime").html("<b>Termina:</b> " + end + "<br />")
         } else {
             $("#endTime").html(""); //no end. clear out previous info.
         }
