@@ -136,6 +136,26 @@ class User extends CActiveRecord
 		));
 	}
 
+        public function search2()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+                $criteria->distinct = true;
+		$criteria->compare('t.iduser',$this->iduser);
+		$criteria->compare('t.username',$this->username,true);
+		$criteria->compare('t.email',$this->email,true);
+		$criteria->compare('t.state',$this->state);
+		$criteria->compare('t2.itemname','role_Idt');
+                $criteria->compare('t3.value',$this->nombreCompleto,true);
+                $criteria->compare('t5.nombre',$this->idFicha,true);
+                $criteria->join = 'JOIN cruge_authassignment as t2 ON t2.userid = t.iduser ';
+                $criteria->join .= 'JOIN cruge_fieldvalue as t3 ON t3.iduser = t.iduser ';
+                $criteria->join .= 'JOIN horario as t4 ON t4.idIdt=t.iduser ';
+                $criteria->join .= 'JOIN ficha as t5 ON t5.idFicha=t4.idFicha ';
+		return User::model()->findAll($criteria);
+	}
+        
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

@@ -9,25 +9,24 @@ $url=Yii::app()->createUrl('/reporte/exportarExcel/');
 
 $scriptUrl = Yii::app()->request->scriptUrl;
 Yii::app()->clientScript->registerScript('search', "
-$('#btnExpExcel').click(function(event){
+$('#btnExpExcel2').click(function(event){
         event.preventDefault();
-        var urlExport = 'http://localhost/agendaidt/reporte/exportarExcel';
-        $('input,select').each(function(){
+        var urlExport = 'exportarExcelIdt/';
+        $('input').each(function(){
             if(this.value){
                 var value = this.value;
                 urlExport += this.name+'/'+value+'/';
             }
         });
-        window.location = urlExport;
+        
+        //window.location = urlExport;
 });
 ");
 ?>
 <h2 class="text-center">IDT'S</h2>
-<form method="post">
+<form metod="get" action="exportarExcelIdt">
 <?php 
-//echo CHtml::imageButton(Yii::app()->request->baseUrl . '/images/export-excel.jpg',array('name'=>'btnExpExcel','class' => 'btn btn-success pull-right')); 
-//echo CHtml::linkButton('Excel <i class="glyphicon glyphicon-cloud-download"></i>',array('name'=>'btnExpExcel','class' => 'btn btn-success pull-right')); 
-echo '</form><br>';
+echo CHtml::linkButton('Excel <i class="glyphicon glyphicon-cloud-download"></i>',array('name'=>'btnExpExcel','type'=>'submit','class' => 'btn btn-info pull-left',)); 
 $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'User-grid',
 	'dataProvider'=>$model->search(),
@@ -42,6 +41,6 @@ $this->widget('zii.widgets.grid.CGridView', array(
 )); 
 
 ?>
-
+</form>
 
 

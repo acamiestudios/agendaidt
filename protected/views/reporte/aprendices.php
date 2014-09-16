@@ -23,11 +23,9 @@ $('#btnExpExcel').click(function(event){
 ");
 ?>
 <h2 class="text-center">Aprendices</h2>
-<form method="post">
+<form metod="get" action="exportarExcelAprendiz">
 <?php 
-//echo CHtml::imageButton(Yii::app()->request->baseUrl . '/images/export-excel.jpg',array('name'=>'btnExpExcel','class' => 'btn btn-success pull-right')); 
-//echo CHtml::linkButton('Excel <i class="glyphicon glyphicon-cloud-download"></i>',array('name'=>'btnExpExcel','class' => 'btn btn-success pull-right')); 
-echo '</form><br>';
+echo CHtml::linkButton('Excel <i class="glyphicon glyphicon-cloud-download"></i>',array('name'=>'btnExpExcel','type'=>'submit','class' => 'btn btn-info pull-left',)); 
 $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'User-grid',
 	'dataProvider'=>$model->search(),
@@ -45,6 +43,6 @@ $this->widget('zii.widgets.grid.CGridView', array(
 )); 
 
 ?>
-
+</form>
 
 

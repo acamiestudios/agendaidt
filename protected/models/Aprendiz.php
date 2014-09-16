@@ -106,6 +106,23 @@ class Aprendiz extends CActiveRecord
 		));
 	}
 
+        public function search2()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('idAprendiz',$this->idAprendiz);
+		$criteria->compare('primer_nombre',$this->primer_nombre,true);
+		$criteria->compare('segundo_nombre',$this->segundo_nombre,true);
+		$criteria->compare('primer_apellido',$this->primer_apellido,true);
+		$criteria->compare('segundo_apellido',$this->segundo_apellido,true);
+		$criteria->compare('cedula',$this->cedula);
+		$criteria->compare('idFicha0.nombre',$this->idFicha,true);
+                $criteria->with=array('idFicha0');
+		return Aprendiz::model()->findAll($criteria);
+	}
+        
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
