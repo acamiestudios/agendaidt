@@ -103,6 +103,23 @@ class Horario extends CActiveRecord
 		));
 	}
 
+        public function search2array()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('idHorario',$this->idHorario);
+		$criteria->compare('idHora0.valor',$this->idHora,true);
+		$criteria->compare('t.dia',$this->dia);
+		$criteria->compare('idFicha0.nombre',$this->idFicha,true);
+		$criteria->compare('t3.value',$this->idIdt,true);
+                $criteria->with=array('idHora0','idFicha0');
+                $criteria->join = 'JOIN cruge_authassignment as t2 ON t2.userid = t.idIdt ';
+                $criteria->join .='JOIN cruge_fieldvalue as t3 ON t3.iduser = t.idIdt';
+		return Horario::model()->findAll($criteria);
+	}
+        
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

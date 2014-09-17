@@ -84,4 +84,20 @@ class ReporteController extends Controller {
         }
         
     }
+    
+    public function actionExportarExcelHorarios() {
+        if( isset($_GET['Horario']) ){
+            $buscar = new Horario;
+            $buscar->unsetAttributes();
+            $buscar->attributes=$_GET['Horario'];
+            $model=$buscar->search2array();
+            $this->layout='none';
+            Yii::app()->request->sendFile("horario" . date("YmdHis") . ".xls",
+                            $this->renderPartial("_exportarExcelHorarios",array(
+                                                    "model"=>$model
+                            ),true)
+                    );
+        }
+        
+    }
 }

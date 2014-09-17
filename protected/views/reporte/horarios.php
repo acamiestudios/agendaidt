@@ -5,14 +5,25 @@
 $this->breadcrumbs=array(
 	'Horarios'
 );
-?>
-<h2 class="text-center">Administrar Horarios</h2>
-<p>
-Opcionalmente puedes usar operadores de comparaci&oacute;n (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-o <b>=</b>) en el comienzo de cada campo de busqueda.
-</p>
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+$scriptUrl = Yii::app()->request->scriptUrl;
+Yii::app()->clientScript->registerScript('search', "
+$('#btnExpExcel').click(function(event){
+        event.preventDefault();
+        var urlExport = 'http://localhost/agendaidt/reporte/exportarExcelHorarios';
+        $('input,select').each(function(){
+            if(this.value){
+                var value = this.value;
+                urlExport += this.name+'/'+value+'/';
+            }
+        });
+        window.location = urlExport;
+});
+");?>
+<h2 class="text-center">Horarios</h2>
+<form metod="get" action="exportarExcelHorarios">
+<?php 
+echo CHtml::linkButton('Excel <i class="glyphicon glyphicon-cloud-download"></i>',array('name'=>'btnExpExcel','type'=>'submit','class' => 'btn btn-info pull-left',)); 
+$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'horario-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
@@ -28,3 +39,4 @@ o <b>=</b>) en el comienzo de cada campo de busqueda.
 		array('name'=>'idHora','value'=>'$data->idHora0->valor'),
 	),
 )); ?>
+</form>
