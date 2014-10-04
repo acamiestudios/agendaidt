@@ -129,8 +129,8 @@ class User extends CActiveRecord
                 $criteria->compare('t5.nombre',$this->idFicha,true);
                 $criteria->join = 'JOIN cruge_authassignment as t2 ON t2.userid = t.iduser ';
                 $criteria->join .= 'JOIN cruge_fieldvalue as t3 ON t3.iduser = t.iduser ';
-                $criteria->join .= 'JOIN horario as t4 ON t4.idIdt=t.iduser ';
-                $criteria->join .= 'JOIN ficha as t5 ON t5.idFicha=t4.idFicha ';
+                $criteria->join .= 'LEFT JOIN horario as t4 ON t4.idIdt=t.iduser ';
+                $criteria->join .= 'LEFT JOIN ficha as t5 ON t5.idFicha=t4.idFicha ';
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
